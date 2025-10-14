@@ -1964,7 +1964,7 @@
           alert("Please enter valid email.");
           return;
         }
-        sendBtn.setAttribute("value", "Sending...");
+        sendBtn.textContent = "Sending...";
 
         let params = {
           projectDetails,
@@ -1976,7 +1976,7 @@
         emailjs
           .send("service_r20egd4", "template_b8p1hm1", params)
           .then((Response) => {
-            sendBtn.setAttribute("value", btnContent);
+            sendBtn.innerHTML = btnContent;
             name.value = "";
             email.value = "";
             company.value = "";
