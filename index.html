@@ -37,6 +37,25 @@
       content="Professional web development, digital marketing, and social media management services."
     />
 
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://wimaskcompany.com" />
     <link
@@ -49,6 +68,7 @@
       src="https://kit.fontawesome.com/f451cfc2d6.js"
       crossorigin="anonymous"
     ></script>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -84,6 +104,1203 @@
         margin-bottom: 5px;
       }
     </style>
+    <style>
+      @font-face {
+        font-family: "Open Sans Regular";
+        font-style: normal;
+        font-weight: 400;
+        src: url("chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-regular.woff");
+      }
+    </style>
+    <style>
+      @font-face {
+        font-family: "Open Sans Bold";
+        font-style: normal;
+        font-weight: 800;
+        src: url("chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/OpenSans-Bold.woff");
+      }
+    </style>
+    <style>
+      @font-face {
+        font-family: "Open Sans ExtraBold";
+        font-style: normal;
+        font-weight: 800;
+        src: url("chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-800.woff");
+      }
+    </style>
+    <style>
+      .swal2-popup.swal2-toast {
+        box-sizing: border-box;
+        grid-column: 1/4 !important;
+        grid-row: 1/4 !important;
+        grid-template-columns: min-content auto min-content;
+        padding: 1em;
+        overflow-y: hidden;
+        background: #fff;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.075),
+          1px 2px 4px rgba(0, 0, 0, 0.075), 1px 3px 8px rgba(0, 0, 0, 0.075),
+          2px 4px 16px rgba(0, 0, 0, 0.075);
+        pointer-events: all;
+      }
+      .swal2-popup.swal2-toast > * {
+        grid-column: 2;
+      }
+      .swal2-popup.swal2-toast .swal2-title {
+        margin: 0.5em 1em;
+        padding: 0;
+        font-size: 1em;
+        text-align: initial;
+      }
+      .swal2-popup.swal2-toast .swal2-loading {
+        justify-content: center;
+      }
+      .swal2-popup.swal2-toast .swal2-input {
+        height: 2em;
+        margin: 0.5em;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-validation-message {
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-footer {
+        margin: 0.5em 0 0;
+        padding: 0.5em 0 0;
+        font-size: 0.8em;
+      }
+      .swal2-popup.swal2-toast .swal2-close {
+        grid-column: 3/3;
+        grid-row: 1/99;
+        align-self: center;
+        width: 0.8em;
+        height: 0.8em;
+        margin: 0;
+        font-size: 2em;
+      }
+      .swal2-popup.swal2-toast .swal2-html-container {
+        margin: 0.5em 1em;
+        padding: 0;
+        overflow: initial;
+        font-size: 1em;
+        text-align: initial;
+      }
+      .swal2-popup.swal2-toast .swal2-html-container:empty {
+        padding: 0;
+      }
+      .swal2-popup.swal2-toast .swal2-loader {
+        grid-column: 1;
+        grid-row: 1/99;
+        align-self: center;
+        width: 2em;
+        height: 2em;
+        margin: 0.25em;
+      }
+      .swal2-popup.swal2-toast .swal2-icon {
+        grid-column: 1;
+        grid-row: 1/99;
+        align-self: center;
+        width: 2em;
+        min-width: 2em;
+        height: 2em;
+        margin: 0 0.5em 0 0;
+      }
+      .swal2-popup.swal2-toast .swal2-icon .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 1.8em;
+        font-weight: bold;
+      }
+      .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"] {
+        top: 0.875em;
+        width: 1.375em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="left"] {
+        left: 0.3125em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-icon.swal2-error
+        [class^="swal2-x-mark-line"][class$="right"] {
+        right: 0.3125em;
+      }
+      .swal2-popup.swal2-toast .swal2-actions {
+        justify-content: flex-start;
+        height: auto;
+        margin: 0;
+        margin-top: 0.5em;
+        padding: 0 0.5em;
+      }
+      .swal2-popup.swal2-toast .swal2-styled {
+        margin: 0.25em 0.5em;
+        padding: 0.4em 0.6em;
+        font-size: 1em;
+      }
+      .swal2-popup.swal2-toast .swal2-success {
+        border-color: #a5dc86;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 1.6em;
+        height: 3em;
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.8em;
+        left: -0.5em;
+        transform: rotate(-45deg);
+        transform-origin: 2em 2em;
+        border-radius: 4em 0 0 4em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.25em;
+        left: 0.9375em;
+        transform-origin: 0 1.5em;
+        border-radius: 0 4em 4em 0;
+      }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em;
+      }
+      .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+        top: 0;
+        left: 0.4375em;
+        width: 0.4375em;
+        height: 2.6875em;
+      }
+      .swal2-popup.swal2-toast .swal2-success [class^="swal2-success-line"] {
+        height: 0.3125em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-line"][class$="tip"] {
+        top: 1.125em;
+        left: 0.1875em;
+        width: 0.75em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success
+        [class^="swal2-success-line"][class$="long"] {
+        top: 0.9375em;
+        right: 0.1875em;
+        width: 1.375em;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success.swal2-icon-show
+        .swal2-success-line-tip {
+        animation: swal2-toast-animate-success-line-tip 0.75s;
+      }
+      .swal2-popup.swal2-toast
+        .swal2-success.swal2-icon-show
+        .swal2-success-line-long {
+        animation: swal2-toast-animate-success-line-long 0.75s;
+      }
+      .swal2-popup.swal2-toast.swal2-show {
+        animation: swal2-toast-show 0.5s;
+      }
+      .swal2-popup.swal2-toast.swal2-hide {
+        animation: swal2-toast-hide 0.1s forwards;
+      }
+      div:where(.swal2-container) {
+        display: grid;
+        position: fixed;
+        z-index: 1060;
+        inset: 0;
+        box-sizing: border-box;
+        grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
+        grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(
+            min-content,
+            auto
+          );
+        height: 100%;
+        padding: 0.625em;
+        overflow-x: hidden;
+        transition: background-color 0.1s;
+        -webkit-overflow-scrolling: touch;
+      }
+      div:where(.swal2-container).swal2-backdrop-show,
+      div:where(.swal2-container).swal2-noanimation {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      div:where(.swal2-container).swal2-backdrop-hide {
+        background: rgba(0, 0, 0, 0) !important;
+      }
+      div:where(.swal2-container).swal2-top-start,
+      div:where(.swal2-container).swal2-center-start,
+      div:where(.swal2-container).swal2-bottom-start {
+        grid-template-columns: minmax(0, 1fr) auto auto;
+      }
+      div:where(.swal2-container).swal2-top,
+      div:where(.swal2-container).swal2-center,
+      div:where(.swal2-container).swal2-bottom {
+        grid-template-columns: auto minmax(0, 1fr) auto;
+      }
+      div:where(.swal2-container).swal2-top-end,
+      div:where(.swal2-container).swal2-center-end,
+      div:where(.swal2-container).swal2-bottom-end {
+        grid-template-columns: auto auto minmax(0, 1fr);
+      }
+      div:where(.swal2-container).swal2-top-start > .swal2-popup {
+        align-self: start;
+      }
+      div:where(.swal2-container).swal2-top > .swal2-popup {
+        grid-column: 2;
+        align-self: start;
+        justify-self: center;
+      }
+      div:where(.swal2-container).swal2-top-end > .swal2-popup,
+      div:where(.swal2-container).swal2-top-right > .swal2-popup {
+        grid-column: 3;
+        align-self: start;
+        justify-self: end;
+      }
+      div:where(.swal2-container).swal2-center-start > .swal2-popup,
+      div:where(.swal2-container).swal2-center-left > .swal2-popup {
+        grid-row: 2;
+        align-self: center;
+      }
+      div:where(.swal2-container).swal2-center > .swal2-popup {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: center;
+        justify-self: center;
+      }
+      div:where(.swal2-container).swal2-center-end > .swal2-popup,
+      div:where(.swal2-container).swal2-center-right > .swal2-popup {
+        grid-column: 3;
+        grid-row: 2;
+        align-self: center;
+        justify-self: end;
+      }
+      div:where(.swal2-container).swal2-bottom-start > .swal2-popup,
+      div:where(.swal2-container).swal2-bottom-left > .swal2-popup {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: end;
+      }
+      div:where(.swal2-container).swal2-bottom > .swal2-popup {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: center;
+        align-self: end;
+      }
+      div:where(.swal2-container).swal2-bottom-end > .swal2-popup,
+      div:where(.swal2-container).swal2-bottom-right > .swal2-popup {
+        grid-column: 3;
+        grid-row: 3;
+        align-self: end;
+        justify-self: end;
+      }
+      div:where(.swal2-container).swal2-grow-row > .swal2-popup,
+      div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
+        grid-column: 1/4;
+        width: 100%;
+      }
+      div:where(.swal2-container).swal2-grow-column > .swal2-popup,
+      div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
+        grid-row: 1/4;
+        align-self: stretch;
+      }
+      div:where(.swal2-container).swal2-no-transition {
+        transition: none !important;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup) {
+        display: none;
+        position: relative;
+        box-sizing: border-box;
+        grid-template-columns: minmax(0, 100%);
+        width: 32em;
+        max-width: 100%;
+        padding: 0 0 1.25em;
+        border: none;
+        border-radius: 5px;
+        background: #fff;
+        color: #545454;
+        font-family: inherit;
+        font-size: 1rem;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup):focus {
+        outline: none;
+      }
+      div:where(.swal2-container) div:where(.swal2-popup).swal2-loading {
+        overflow-y: hidden;
+      }
+      div:where(.swal2-container) h2:where(.swal2-title) {
+        position: relative;
+        max-width: 100%;
+        margin: 0;
+        padding: 0.8em 1em 0;
+        color: inherit;
+        font-size: 1.875em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: none;
+        word-wrap: break-word;
+      }
+      div:where(.swal2-container) div:where(.swal2-actions) {
+        display: flex;
+        z-index: 1;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin: 1.25em auto 0;
+        padding: 0;
+      }
+      div:where(.swal2-container)
+        div:where(.swal2-actions):not(.swal2-loading)
+        .swal2-styled[disabled] {
+        opacity: 0.4;
+      }
+      div:where(.swal2-container)
+        div:where(.swal2-actions):not(.swal2-loading)
+        .swal2-styled:hover {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0.1)
+        );
+      }
+      div:where(.swal2-container)
+        div:where(.swal2-actions):not(.swal2-loading)
+        .swal2-styled:active {
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        );
+      }
+      div:where(.swal2-container) div:where(.swal2-loader) {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 2.2em;
+        height: 2.2em;
+        margin: 0 1.875em;
+        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        border-width: 0.25em;
+        border-style: solid;
+        border-radius: 100%;
+        border-color: #2778c4 rgba(0, 0, 0, 0) #2778c4 rgba(0, 0, 0, 0);
+      }
+      div:where(.swal2-container) button:where(.swal2-styled) {
+        margin: 0.3125em;
+        padding: 0.625em 1.1em;
+        transition: box-shadow 0.1s;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+        font-weight: 500;
+      }
+      div:where(.swal2-container) button:where(.swal2-styled):not([disabled]) {
+        cursor: pointer;
+      }
+      div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #7066e0;
+        color: #fff;
+        font-size: 1em;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled).swal2-confirm:focus {
+        box-shadow: 0 0 0 3px rgba(112, 102, 224, 0.5);
+      }
+      div:where(.swal2-container) button:where(.swal2-styled).swal2-deny {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #dc3741;
+        color: #fff;
+        font-size: 1em;
+      }
+      div:where(.swal2-container) button:where(.swal2-styled).swal2-deny:focus {
+        box-shadow: 0 0 0 3px rgba(220, 55, 65, 0.5);
+      }
+      div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel {
+        border: 0;
+        border-radius: 0.25em;
+        background: initial;
+        background-color: #6e7881;
+        color: #fff;
+        font-size: 1em;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled).swal2-cancel:focus {
+        box-shadow: 0 0 0 3px rgba(110, 120, 129, 0.5);
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled).swal2-default-outline:focus {
+        box-shadow: 0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      div:where(.swal2-container) button:where(.swal2-styled):focus {
+        outline: none;
+      }
+      div:where(.swal2-container)
+        button:where(.swal2-styled)::-moz-focus-inner {
+        border: 0;
+      }
+      div:where(.swal2-container) div:where(.swal2-footer) {
+        margin: 1em 0 0;
+        padding: 1em 1em 0;
+        border-top: 1px solid #eee;
+        color: inherit;
+        font-size: 1em;
+        text-align: center;
+      }
+      div:where(.swal2-container) .swal2-timer-progress-bar-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        grid-column: auto !important;
+        overflow: hidden;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
+        width: 100%;
+        height: 0.25em;
+        background: rgba(0, 0, 0, 0.2);
+      }
+      div:where(.swal2-container) img:where(.swal2-image) {
+        max-width: 100%;
+        margin: 2em auto 1em;
+      }
+      div:where(.swal2-container) button:where(.swal2-close) {
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        width: 1.2em;
+        height: 1.2em;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: -1.2em;
+        padding: 0;
+        overflow: hidden;
+        transition: color 0.1s, box-shadow 0.1s;
+        border: none;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0);
+        color: #ccc;
+        font-family: monospace;
+        font-size: 2.5em;
+        cursor: pointer;
+        justify-self: end;
+      }
+      div:where(.swal2-container) button:where(.swal2-close):hover {
+        transform: none;
+        background: rgba(0, 0, 0, 0);
+        color: #f27474;
+      }
+      div:where(.swal2-container) button:where(.swal2-close):focus {
+        outline: none;
+        box-shadow: inset 0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner {
+        border: 0;
+      }
+      div:where(.swal2-container) .swal2-html-container {
+        z-index: 1;
+        justify-content: center;
+        margin: 1em 1.6em 0.3em;
+        padding: 0;
+        overflow: auto;
+        color: inherit;
+        font-size: 1.125em;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+      div:where(.swal2-container) input:where(.swal2-input),
+      div:where(.swal2-container) input:where(.swal2-file),
+      div:where(.swal2-container) textarea:where(.swal2-textarea),
+      div:where(.swal2-container) select:where(.swal2-select),
+      div:where(.swal2-container) div:where(.swal2-radio),
+      div:where(.swal2-container) label:where(.swal2-checkbox) {
+        margin: 1em 2em 3px;
+      }
+      div:where(.swal2-container) input:where(.swal2-input),
+      div:where(.swal2-container) input:where(.swal2-file),
+      div:where(.swal2-container) textarea:where(.swal2-textarea) {
+        box-sizing: border-box;
+        width: auto;
+        transition: border-color 0.1s, box-shadow 0.1s;
+        border: 1px solid #d9d9d9;
+        border-radius: 0.1875em;
+        background: rgba(0, 0, 0, 0);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06),
+          0 0 0 3px rgba(0, 0, 0, 0);
+        color: inherit;
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,
+      div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,
+      div:where(.swal2-container)
+        textarea:where(.swal2-textarea).swal2-inputerror {
+        border-color: #f27474 !important;
+        box-shadow: 0 0 2px #f27474 !important;
+      }
+      div:where(.swal2-container) input:where(.swal2-input):focus,
+      div:where(.swal2-container) input:where(.swal2-file):focus,
+      div:where(.swal2-container) textarea:where(.swal2-textarea):focus {
+        border: 1px solid #b4dbed;
+        outline: none;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06),
+          0 0 0 3px rgba(100, 150, 200, 0.5);
+      }
+      div:where(.swal2-container) input:where(.swal2-input)::placeholder,
+      div:where(.swal2-container) input:where(.swal2-file)::placeholder,
+      div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder {
+        color: #ccc;
+      }
+      div:where(.swal2-container) .swal2-range {
+        margin: 1em 2em 3px;
+        background: #fff;
+      }
+      div:where(.swal2-container) .swal2-range input {
+        width: 80%;
+      }
+      div:where(.swal2-container) .swal2-range output {
+        width: 20%;
+        color: inherit;
+        font-weight: 600;
+        text-align: center;
+      }
+      div:where(.swal2-container) .swal2-range input,
+      div:where(.swal2-container) .swal2-range output {
+        height: 2.625em;
+        padding: 0;
+        font-size: 1.125em;
+        line-height: 2.625em;
+      }
+      div:where(.swal2-container) .swal2-input {
+        height: 2.625em;
+        padding: 0 0.75em;
+      }
+      div:where(.swal2-container) .swal2-file {
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        background: rgba(0, 0, 0, 0);
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) .swal2-textarea {
+        height: 6.75em;
+        padding: 0.75em;
+      }
+      div:where(.swal2-container) .swal2-select {
+        min-width: 50%;
+        max-width: 100%;
+        padding: 0.375em 0.625em;
+        background: rgba(0, 0, 0, 0);
+        color: inherit;
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) .swal2-radio,
+      div:where(.swal2-container) .swal2-checkbox {
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        color: inherit;
+      }
+      div:where(.swal2-container) .swal2-radio label,
+      div:where(.swal2-container) .swal2-checkbox label {
+        margin: 0 0.6em;
+        font-size: 1.125em;
+      }
+      div:where(.swal2-container) .swal2-radio input,
+      div:where(.swal2-container) .swal2-checkbox input {
+        flex-shrink: 0;
+        margin: 0 0.4em;
+      }
+      div:where(.swal2-container) label:where(.swal2-input-label) {
+        display: flex;
+        justify-content: center;
+        margin: 1em auto 0;
+      }
+      div:where(.swal2-container) div:where(.swal2-validation-message) {
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0 0;
+        padding: 0.625em;
+        overflow: hidden;
+        background: #f0f0f0;
+        color: #666;
+        font-size: 1em;
+        font-weight: 300;
+      }
+      div:where(.swal2-container) div:where(.swal2-validation-message)::before {
+        content: "!";
+        display: inline-block;
+        width: 1.5em;
+        min-width: 1.5em;
+        height: 1.5em;
+        margin: 0 0.625em;
+        border-radius: 50%;
+        background-color: #f27474;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      div:where(.swal2-container) .swal2-progress-steps {
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 100%;
+        margin: 1.25em auto;
+        padding: 0;
+        background: rgba(0, 0, 0, 0);
+        font-weight: 600;
+      }
+      div:where(.swal2-container) .swal2-progress-steps li {
+        display: inline-block;
+        position: relative;
+      }
+      div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step {
+        z-index: 20;
+        flex-shrink: 0;
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        background: #2778c4;
+        color: #fff;
+        line-height: 2em;
+        text-align: center;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step {
+        background: #2778c4;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step
+        ~ .swal2-progress-step {
+        background: #add8e6;
+        color: #fff;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step.swal2-active-progress-step
+        ~ .swal2-progress-step-line {
+        background: #add8e6;
+      }
+      div:where(.swal2-container)
+        .swal2-progress-steps
+        .swal2-progress-step-line {
+        z-index: 10;
+        flex-shrink: 0;
+        width: 2.5em;
+        height: 0.4em;
+        margin: 0 -1px;
+        background: #2778c4;
+      }
+      div:where(.swal2-icon) {
+        position: relative;
+        box-sizing: content-box;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        margin: 2.5em auto 0.6em;
+        border: 0.25em solid rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        border-color: #000;
+        font-family: inherit;
+        line-height: 5em;
+        cursor: default;
+        user-select: none;
+      }
+      div:where(.swal2-icon) .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 3.75em;
+      }
+      div:where(.swal2-icon).swal2-error {
+        border-color: #f27474;
+        color: #f27474;
+      }
+      div:where(.swal2-icon).swal2-error .swal2-x-mark {
+        position: relative;
+        flex-grow: 1;
+      }
+      div:where(.swal2-icon).swal2-error [class^="swal2-x-mark-line"] {
+        display: block;
+        position: absolute;
+        top: 2.3125em;
+        width: 2.9375em;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #f27474;
+      }
+      div:where(.swal2-icon).swal2-error
+        [class^="swal2-x-mark-line"][class$="left"] {
+        left: 1.0625em;
+        transform: rotate(45deg);
+      }
+      div:where(.swal2-icon).swal2-error
+        [class^="swal2-x-mark-line"][class$="right"] {
+        right: 1em;
+        transform: rotate(-45deg);
+      }
+      div:where(.swal2-icon).swal2-error.swal2-icon-show {
+        animation: swal2-animate-error-icon 0.5s;
+      }
+      div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark {
+        animation: swal2-animate-error-x-mark 0.5s;
+      }
+      div:where(.swal2-icon).swal2-warning {
+        border-color: #facea8;
+        color: #f8bb86;
+      }
+      div:where(.swal2-icon).swal2-warning.swal2-icon-show {
+        animation: swal2-animate-error-icon 0.5s;
+      }
+      div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content {
+        animation: swal2-animate-i-mark 0.5s;
+      }
+      div:where(.swal2-icon).swal2-info {
+        border-color: #9de0f6;
+        color: #3fc3ee;
+      }
+      div:where(.swal2-icon).swal2-info.swal2-icon-show {
+        animation: swal2-animate-error-icon 0.5s;
+      }
+      div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content {
+        animation: swal2-animate-i-mark 0.8s;
+      }
+      div:where(.swal2-icon).swal2-question {
+        border-color: #c9dae1;
+        color: #87adbd;
+      }
+      div:where(.swal2-icon).swal2-question.swal2-icon-show {
+        animation: swal2-animate-error-icon 0.5s;
+      }
+      div:where(.swal2-icon).swal2-question.swal2-icon-show
+        .swal2-icon-content {
+        animation: swal2-animate-question-mark 0.8s;
+      }
+      div:where(.swal2-icon).swal2-success {
+        border-color: #a5dc86;
+        color: #a5dc86;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-circular-line"] {
+        position: absolute;
+        width: 3.75em;
+        height: 7.5em;
+        transform: rotate(45deg);
+        border-radius: 50%;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-circular-line"][class$="left"] {
+        top: -0.4375em;
+        left: -2.0635em;
+        transform: rotate(-45deg);
+        transform-origin: 3.75em 3.75em;
+        border-radius: 7.5em 0 0 7.5em;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-circular-line"][class$="right"] {
+        top: -0.6875em;
+        left: 1.875em;
+        transform: rotate(-45deg);
+        transform-origin: 0 3.75em;
+        border-radius: 0 7.5em 7.5em 0;
+      }
+      div:where(.swal2-icon).swal2-success .swal2-success-ring {
+        position: absolute;
+        z-index: 2;
+        top: -0.25em;
+        left: -0.25em;
+        box-sizing: content-box;
+        width: 100%;
+        height: 100%;
+        border: 0.25em solid rgba(165, 220, 134, 0.3);
+        border-radius: 50%;
+      }
+      div:where(.swal2-icon).swal2-success .swal2-success-fix {
+        position: absolute;
+        z-index: 1;
+        top: 0.5em;
+        left: 1.625em;
+        width: 0.4375em;
+        height: 5.625em;
+        transform: rotate(-45deg);
+      }
+      div:where(.swal2-icon).swal2-success [class^="swal2-success-line"] {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        height: 0.3125em;
+        border-radius: 0.125em;
+        background-color: #a5dc86;
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-line"][class$="tip"] {
+        top: 2.875em;
+        left: 0.8125em;
+        width: 1.5625em;
+        transform: rotate(45deg);
+      }
+      div:where(.swal2-icon).swal2-success
+        [class^="swal2-success-line"][class$="long"] {
+        top: 2.375em;
+        right: 0.5em;
+        width: 2.9375em;
+        transform: rotate(-45deg);
+      }
+      div:where(.swal2-icon).swal2-success.swal2-icon-show
+        .swal2-success-line-tip {
+        animation: swal2-animate-success-line-tip 0.75s;
+      }
+      div:where(.swal2-icon).swal2-success.swal2-icon-show
+        .swal2-success-line-long {
+        animation: swal2-animate-success-line-long 0.75s;
+      }
+      div:where(.swal2-icon).swal2-success.swal2-icon-show
+        .swal2-success-circular-line-right {
+        animation: swal2-rotate-success-circular-line 4.25s ease-in;
+      }
+      [class^="swal2"] {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .swal2-show {
+        animation: swal2-show 0.3s;
+      }
+      .swal2-hide {
+        animation: swal2-hide 0.15s forwards;
+      }
+      .swal2-noanimation {
+        transition: none;
+      }
+      .swal2-scrollbar-measure {
+        position: absolute;
+        top: -9999px;
+        width: 50px;
+        height: 50px;
+        overflow: scroll;
+      }
+      .swal2-rtl .swal2-close {
+        margin-right: initial;
+        margin-left: 0;
+      }
+      .swal2-rtl .swal2-timer-progress-bar {
+        right: 0;
+        left: auto;
+      }
+      @keyframes swal2-toast-show {
+        0% {
+          transform: translateY(-0.625em) rotateZ(2deg);
+        }
+        33% {
+          transform: translateY(0) rotateZ(-2deg);
+        }
+        66% {
+          transform: translateY(0.3125em) rotateZ(2deg);
+        }
+        100% {
+          transform: translateY(0) rotateZ(0deg);
+        }
+      }
+      @keyframes swal2-toast-hide {
+        100% {
+          transform: rotateZ(1deg);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-toast-animate-success-line-tip {
+        0% {
+          top: 0.5625em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 0.125em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 0.625em;
+          left: -0.25em;
+          width: 1.625em;
+        }
+        84% {
+          top: 1.0625em;
+          left: 0.75em;
+          width: 0.5em;
+        }
+        100% {
+          top: 1.125em;
+          left: 0.1875em;
+          width: 0.75em;
+        }
+      }
+      @keyframes swal2-toast-animate-success-line-long {
+        0% {
+          top: 1.625em;
+          right: 1.375em;
+          width: 0;
+        }
+        65% {
+          top: 1.25em;
+          right: 0.9375em;
+          width: 0;
+        }
+        84% {
+          top: 0.9375em;
+          right: 0;
+          width: 1.125em;
+        }
+        100% {
+          top: 0.9375em;
+          right: 0.1875em;
+          width: 1.375em;
+        }
+      }
+      @keyframes swal2-show {
+        0% {
+          transform: scale(0.7);
+        }
+        45% {
+          transform: scale(1.05);
+        }
+        80% {
+          transform: scale(0.95);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes swal2-hide {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+      }
+      @keyframes swal2-animate-success-line-tip {
+        0% {
+          top: 1.1875em;
+          left: 0.0625em;
+          width: 0;
+        }
+        54% {
+          top: 1.0625em;
+          left: 0.125em;
+          width: 0;
+        }
+        70% {
+          top: 2.1875em;
+          left: -0.375em;
+          width: 3.125em;
+        }
+        84% {
+          top: 3em;
+          left: 1.3125em;
+          width: 1.0625em;
+        }
+        100% {
+          top: 2.8125em;
+          left: 0.8125em;
+          width: 1.5625em;
+        }
+      }
+      @keyframes swal2-animate-success-line-long {
+        0% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        65% {
+          top: 3.375em;
+          right: 2.875em;
+          width: 0;
+        }
+        84% {
+          top: 2.1875em;
+          right: 0;
+          width: 3.4375em;
+        }
+        100% {
+          top: 2.375em;
+          right: 0.5em;
+          width: 2.9375em;
+        }
+      }
+      @keyframes swal2-rotate-success-circular-line {
+        0% {
+          transform: rotate(-45deg);
+        }
+        5% {
+          transform: rotate(-45deg);
+        }
+        12% {
+          transform: rotate(-405deg);
+        }
+        100% {
+          transform: rotate(-405deg);
+        }
+      }
+      @keyframes swal2-animate-error-x-mark {
+        0% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        50% {
+          margin-top: 1.625em;
+          transform: scale(0.4);
+          opacity: 0;
+        }
+        80% {
+          margin-top: -0.375em;
+          transform: scale(1.15);
+        }
+        100% {
+          margin-top: 0;
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-animate-error-icon {
+        0% {
+          transform: rotateX(100deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateX(0deg);
+          opacity: 1;
+        }
+      }
+      @keyframes swal2-rotate-loading {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes swal2-animate-question-mark {
+        0% {
+          transform: rotateY(-360deg);
+        }
+        100% {
+          transform: rotateY(0);
+        }
+      }
+      @keyframes swal2-animate-i-mark {
+        0% {
+          transform: rotateZ(45deg);
+          opacity: 0;
+        }
+        25% {
+          transform: rotateZ(-25deg);
+          opacity: 0.4;
+        }
+        50% {
+          transform: rotateZ(15deg);
+          opacity: 0.8;
+        }
+        75% {
+          transform: rotateZ(-5deg);
+          opacity: 1;
+        }
+        100% {
+          transform: rotateX(0);
+          opacity: 1;
+        }
+      }
+      body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+        overflow: hidden;
+      }
+      body.swal2-height-auto {
+        height: auto !important;
+      }
+      body.swal2-no-backdrop .swal2-container {
+        background-color: rgba(0, 0, 0, 0) !important;
+        pointer-events: none;
+      }
+      body.swal2-no-backdrop .swal2-container .swal2-popup {
+        pointer-events: all;
+      }
+      body.swal2-no-backdrop .swal2-container .swal2-modal {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      @media print {
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
+          overflow-y: scroll !important;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
+          > [aria-hidden="true"] {
+          display: none;
+        }
+        body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
+          .swal2-container {
+          position: static !important;
+        }
+      }
+      body.swal2-toast-shown .swal2-container {
+        box-sizing: border-box;
+        width: 360px;
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top {
+        inset: 0 auto auto 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-end,
+      body.swal2-toast-shown .swal2-container.swal2-top-right {
+        inset: 0 0 auto auto;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-top-start,
+      body.swal2-toast-shown .swal2-container.swal2-top-left {
+        inset: 0 auto auto 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-start,
+      body.swal2-toast-shown .swal2-container.swal2-center-left {
+        inset: 50% auto auto 0;
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center {
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-center-end,
+      body.swal2-toast-shown .swal2-container.swal2-center-right {
+        inset: 50% 0 auto auto;
+        transform: translateY(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-start,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+        inset: auto auto 0 0;
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom {
+        inset: auto auto 0 50%;
+        transform: translateX(-50%);
+      }
+      body.swal2-toast-shown .swal2-container.swal2-bottom-end,
+      body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+        inset: auto 0 0 auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -109,15 +1326,33 @@
       <div class="min-h-screen">
         <nav
           class="fixed top-0 left-0 right-0 z-50 transition-smooth bg-transparent"
+          style="background: transparent"
         >
           <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
-              <div class="flex-shrink-0">
-                <h1
-                  class="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent"
+              <div class="flex-shrink-0" style="display: flex">
+                <div
+                  class="h-12 w-12 bg-gradient-primary rounded-lg flex items-center justify-center"
+                  style="margin-right: 1rem"
                 >
-                  WIMASK
-                </h1>
+                  <img
+                    src="assets/wimask-logo.png"
+                    alt="Wimask Logo"
+                    style="border-radius: 5px"
+                  />
+                </div>
+                <div>
+                  <h1
+                    class="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent"
+                  >
+                    WIMASK
+                  </h1>
+                  <p
+                    class="text-sm font-bold bg-gradient-primary bg-clip-text text-transparent"
+                  >
+                    Innovate. Secure. Lead.
+                  </p>
+                </div>
               </div>
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-8">
@@ -128,7 +1363,7 @@
                   ><button
                     class="text-foreground hover:text-primary transition-smooth font-medium"
                   >
-                    <a href="#services">Services</a></button
+                    <a href="#services">Our Solutions</a></button
                   ><button
                     class="text-foreground hover:text-primary transition-smooth font-medium"
                   >
@@ -187,7 +1422,7 @@
                     ><button
                       class="text-foreground hover:text-primary transition-smooth font-medium"
                     >
-                      Services
+                      Our Solutions
                     </button></a
                   >
 
@@ -236,16 +1471,19 @@
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                   <span
                     class="bg-gradient-primary bg-clip-text text-transparent"
-                    >Digital Excellence & <br />
-                    Tech Solutions</span
-                  ><br /><span class="text-foreground">Delivered</span>
+                  >
+                    Building Smart Systems &amp; <br />
+                    for a smarter future.</span
+                  ><br /><span class="text-foreground text-3xl"
+                    >Innovate. Lead. Secure.</span
+                  >
                 </h1>
                 <p
                   class="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto"
                 >
-                  Professional web development, digital marketing, and social
-                  media management that drives real business growth and
-                  exceptional user experiences.
+                  WIMASK integrates technology and human potential to transform
+                  schools and up coming businesses efficiently, securely, and
+                  sustainably.
                 </p>
                 <div
                   class="flex justify-center gap-8 mb-12 animate-slide-in-left"
@@ -271,7 +1509,7 @@
                       </svg>
                     </div>
                     <span class="text-sm font-medium text-muted-foreground"
-                      >Web Development</span
+                      >Web & Systems Development</span
                     >
                   </div>
                   <div class="flex flex-col items-center">
@@ -295,7 +1533,7 @@
                       </svg>
                     </div>
                     <span class="text-sm font-medium text-muted-foreground"
-                      >Digital Marketing</span
+                      >Professional Digital Marketing</span
                     >
                   </div>
                   <div class="flex flex-col items-center">
@@ -322,7 +1560,7 @@
                       </svg>
                     </div>
                     <span class="text-sm font-medium text-muted-foreground"
-                      >Social Media</span
+                      >Expert Social Media Management</span
                     >
                   </div>
                 </div>
@@ -353,7 +1591,7 @@
                     ><button
                       class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input h-14 rounded-lg px-10 text-lg min-w-[200px] bg-background/80 backdrop-blur-sm hover:bg-background"
                     >
-                      View Our Services
+                      View Our Solutions
                     </button></a
                   >
                 </div>
@@ -389,11 +1627,126 @@
                   >
                 </h2>
                 <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  We specialize in three core areas that drive digital success
-                  for businesses of all sizes
+                  We specialize in these core areas that drive digital success
+                  for institutions and businesses alike. <br />
+                  We build modular platforms for institutions and businesses.
                 </p>
               </div>
               <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div
+                  class="rounded-lg text-card-foreground shadow-sm group hover:shadow-hover transition-smooth animate-slide-in-left shadow-card border-0 bg-card/50 backdrop-blur-sm"
+                  style="animation-delay: 0s"
+                >
+                  <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
+                    <div
+                      class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
+                    >
+                      <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="tracking-tight text-2xl font-bold mb-2">
+                      Web Systems Development
+                    </h3>
+                    <p class="text-sm text-muted-foreground">
+                      Comprehensive system solutions for automation, data
+                      management, and integration across platforms and devices.
+                    </p>
+                  </div>
+
+                  <div class="p-6 pt-0">
+                    <ul class="space-y-3 mb-6">
+                      <li class="flex items-start gap-3 text-sm">
+                        <div class="text-primary mt-0.5 flex-shrink-0">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-layout-dashboard w-5 h-5"
+                          >
+                            <rect
+                              width="7"
+                              height="9"
+                              x="3"
+                              y="3"
+                              rx="1"
+                            ></rect>
+                            <rect
+                              width="7"
+                              height="5"
+                              x="14"
+                              y="3"
+                              rx="1"
+                            ></rect>
+                            <rect
+                              width="7"
+                              height="9"
+                              x="14"
+                              y="12"
+                              rx="1"
+                            ></rect>
+                            <rect
+                              width="7"
+                              height="5"
+                              x="3"
+                              y="16"
+                              rx="1"
+                            ></rect>
+                          </svg>
+                        </div>
+                        <span class="text-muted-foreground"
+                          >System Architecture & Design</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-3 text-sm">
+                        <div class="text-primary mt-0.5 flex-shrink-0">
+                          <i
+                            class="fa-solid fa-network-wired"
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                        <span class="text-muted-foreground"
+                          >System Integration</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-3 text-sm">
+                        <div class="text-primary mt-0.5 flex-shrink-0">
+                          <i class="fa-solid fa-table-columns"></i>
+                        </div>
+                        <span class="text-muted-foreground"
+                          >Dashboard Implementation</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-3 text-sm">
+                        <div class="text-primary mt-0.5 flex-shrink-0">
+                          <i
+                            class="fa-solid fa-screwdriver-wrench"
+                            aria-hidden="true"
+                          ></i>
+                        </div>
+                        <span class="text-muted-foreground"
+                          >System Support and Maintenance</span
+                        >
+                      </li>
+                      <li class="flex items-start gap-3 text-sm">
+                        <div class="text-primary mt-0.5 flex-shrink-0">
+                          <i class="fa-solid fa-gears" aria-hidden="true"></i>
+                        </div>
+                        <span class="text-muted-foreground">Automation</span>
+                      </li>
+                    </ul>
+                    <button
+                      class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background h-10 px-4 py-2 w-full hover:bg-primary hover:text-primary-foreground transition-smooth"
+                    >
+                      <a href="#send-message">Learn More</a>
+                    </button>
+                  </div>
+                </div>
+
                 <div
                   class="rounded-lg text-card-foreground shadow-sm group hover:shadow-hover transition-smooth animate-slide-in-left shadow-card border-0 bg-card/50 backdrop-blur-sm"
                   style="animation-delay: 0s"
@@ -423,9 +1776,11 @@
                       Web Development
                     </h3>
                     <p class="text-sm text-muted-foreground">
-                      Custom web solutions built with cutting-edge technologies
+                      Modern, responsive, and high-performing websites tailored
+                      to your brand and optimized for user experience.
                     </p>
                   </div>
+
                   <div class="p-6 pt-0">
                     <ul class="space-y-3 mb-6">
                       <li class="flex items-start gap-3 text-sm">
@@ -455,7 +1810,7 @@
                       </li>
                       <li class="flex items-start gap-3 text-sm">
                         <div class="text-primary mt-0.5 flex-shrink-0">
-                          <i class="fa-solid fa-server"></i>
+                          <i class="fa-solid fa-server" aria-hidden="true"></i>
                         </div>
                         <span class="text-muted-foreground"
                           >Backend Solutions (Node.js, Express)</span
@@ -515,7 +1870,7 @@
                       </li>
                       <li class="flex items-start gap-3 text-sm">
                         <div class="text-primary mt-0.5 flex-shrink-0">
-                          <i class="fa-solid fa-robot"></i>
+                          <i class="fa-solid fa-robot" aria-hidden="true"></i>
                         </div>
                         <span class="text-muted-foreground"
                           >AI Integration</span
@@ -529,6 +1884,7 @@
                     </button>
                   </div>
                 </div>
+
                 <div
                   class="rounded-lg text-card-foreground shadow-sm group hover:shadow-hover transition-smooth animate-slide-in-right shadow-card border-0 bg-card/50 backdrop-blur-sm"
                   style="animation-delay: 0.2s"
@@ -1086,216 +2442,7 @@
               </div>
             </div>
           </section>
-          <!--
-          <section
-            id="testimonials"
-            class="py-20 bg-gradient-subtle animate-fade-in-up"
-            
-          >
-            <div class="container mx-auto px-4">
-              <div class="text-center mb-16 animate-fade-in-up">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                  What Our
-                  <span
-                    class="bg-gradient-primary bg-clip-text text-transparent"
-                    >Clients Say</span
-                  >
-                </h2>
-                <p class="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Don't just take our word for it. Here's what our clients have
-                  to say about working with us.
-                </p>
-              </div>
-              <div class="max-w-4xl mx-auto relative">
-                <div
-                  class="rounded-lg text-card-foreground shadow-sm shadow-hover bg-card/50 backdrop-blur-sm border-0 animate-fade-in-up"
-                >
-                  <div class="p-8 md:p-12 text-center">
-                    <div class="mb-6">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-quote w-12 h-12 text-primary mx-auto mb-4 opacity-50"
-                      >
-                        <path
-                          d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-                        ></path>
-                        <path
-                          d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"
-                        ></path>
-                      </svg>
-                      <div class="flex justify-center mb-4">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-star w-5 h-5 text-yellow-400 fill-current"
-                        >
-                          <path
-                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-                          ></path></svg
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-star w-5 h-5 text-yellow-400 fill-current"
-                        >
-                          <path
-                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-                          ></path></svg
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-star w-5 h-5 text-yellow-400 fill-current"
-                        >
-                          <path
-                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-                          ></path></svg
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-star w-5 h-5 text-yellow-400 fill-current"
-                        >
-                          <path
-                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-                          ></path></svg
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-star w-5 h-5 text-yellow-400 fill-current"
-                        >
-                          <path
-                            d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                    <blockquote
-                      class="text-lg md:text-xl text-foreground mb-8 leading-relaxed"
-                    >
-                      "Working with TechSolutions was a game-changer for our
-                      company. They delivered a complex web application on time
-                      and within budget. Their technical expertise and project
-                      management skills are top-notch."
-                    </blockquote>
-                    <div class="flex items-center justify-center gap-4">
-                      <div class="text-4xl">👨‍💼</div>
-                      <div class="text-left">
-                        <div class="font-semibold text-lg">David Thompson</div>
-                        <div class="text-muted-foreground">CTO</div>
-                        <div class="text-primary font-medium">
-                          Tech Innovations Inc.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="flex justify-center gap-4 mt-8">
-                  <button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background h-10 w-10 hover:bg-primary hover:text-primary-foreground transition-smooth"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-chevron-left w-4 h-4"
-                    >
-                      <path d="m15 18-6-6 6-6"></path>
-                    </svg></button
-                  ><button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background h-10 w-10 hover:bg-primary hover:text-primary-foreground transition-smooth"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-chevron-right w-4 h-4"
-                    >
-                      <path d="m9 18 6-6-6-6"></path>
-                    </svg>
-                  </button>
-                </div>
-                <div class="flex justify-center gap-2 mt-6">
-                  <button
-                    class="w-3 h-3 rounded-full transition-smooth bg-muted"
-                  ></button
-                  ><button
-                    class="w-3 h-3 rounded-full transition-smooth bg-muted"
-                  ></button
-                  ><button
-                    class="w-3 h-3 rounded-full transition-smooth bg-muted"
-                  ></button
-                  ><button
-                    class="w-3 h-3 rounded-full transition-smooth bg-primary"
-                  ></button>
-                </div>
-              </div>
-              <div class="mt-16 text-center animate-slide-in-left">
-                <p class="text-muted-foreground mb-8">
-                  Trusted by businesses of all sizes
-                </p>
-                <div class="flex justify-center items-center gap-8 opacity-60">
-                  <div class="text-2xl font-bold">ShopSmart</div>
-                  <div class="text-2xl font-bold">GrowthCorp</div>
-                  <div class="text-2xl font-bold">TechInnovations</div>
-                  <div class="text-2xl font-bold">RestaurantChain</div>
-                </div>
-              </div>
-            </div>
-          </section>
-        -->
+
           <section id="contact" class="py-20 bg-background">
             <div class="container mx-auto px-4">
               <div class="text-center mb-16 animate-fade-in-up">
@@ -1351,8 +2498,8 @@
                             <p class="text-primary font-medium mb-1">
                               <a
                                 target="_blank"
-                                href="mailto:kyleokunda@gmail.com"
-                                >kyleokunda@gmail.com</a
+                                href="mailto:info@wimaskcompany.com"
+                                >info@wimaskcompany.com</a
                               >
                             </p>
                             <p class="text-muted-foreground text-sm">
@@ -1390,8 +2537,8 @@
                           <div>
                             <h3 class="font-semibold text-lg mb-1">Call Us</h3>
                             <p class="text-primary font-medium mb-1">
-                              <a target="_blank" href="tel:+254796020142"
-                                >+254 796 020 142</a
+                              <a target="_blank" href="tel:+254114714182"
+                                >+254 114 714 182</a
                               >
                             </p>
                             <p class="text-muted-foreground text-sm">
@@ -1412,6 +2559,7 @@
                             <i
                               class="fa-brands fa-whatsapp"
                               style="scale: 1.5"
+                              aria-hidden="true"
                             ></i>
                           </div>
                           <div>
@@ -1419,8 +2567,8 @@
                             <p class="text-primary font-medium mb-1">
                               <a
                                 target="_blank"
-                                href="https://wa.me/+254796020142?text='Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services.'"
-                                >+254 796 020 142</a
+                                href="https://wa.me/+254114714182?text=Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                                >+254 114 714 182</a
                               >
                             </p>
                             <p class="text-muted-foreground text-sm">
@@ -1432,7 +2580,22 @@
                     </div>
                   </div>
                   <div
-                    class="rounded-lg shadow-sm shadow-card bg-gradient-primary text-white border-0 mb-8"
+                    class="rounded-lg text-card-foreground shadow-sm shadow-card hover:shadow-hover transition-smooth border-0 bg-gradient-subtle mb-8"
+                  >
+                    <a
+                      href="https://www.accessories.wimaskcompany.com"
+                      target="_blank"
+                    >
+                      <div class="flex flex-col space-y-1.5 p-6">
+                        <h3 class="font-semibold tracking-tight text-xl">
+                          Click here to visit our
+                          <span class="gradient-text">Tech Store</span>
+                        </h3>
+                      </div>
+                    </a>
+                  </div>
+                  <div
+                    class="rounded-lg shadow-sm shadow-card bg-gradient-primary text-white border-0"
                   >
                     <div class="flex flex-col space-y-1.5 p-6">
                       <h3 class="font-semibold tracking-tight text-xl">
@@ -1506,18 +2669,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="rounded-lg shadow-sm shadow-card bg-gradient-primary text-white border-0 mb-8"
-                  >
-                    <a href="https://www.accessories.wimaskcompany.com" target="_blank">
-                      <div class="flex flex-col space-y-1.5 p-6">
-                        <h3 class="font-semibold tracking-tight text-xl">
-                          Click here to visit our Tech Store.
-                        </h3>
-                      </div>
-                    </a>
-                    
                   </div>
                 </div>
                 <div
@@ -1686,99 +2837,7 @@
                   strategic digital marketing, and innovative social media
                   management solutions.
                 </p>
-                <!--
-                <div class="flex gap-4">
-                  <a
-                    href="#"
-                    aria-label="Facebook"
-                    class="w-10 h-10 bg-background/10 hover:bg-gradient-primary rounded-full flex items-center justify-center transition-smooth hover:scale-110"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-facebook w-4 h-4"
-                    >
-                      <path
-                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                      ></path></svg></a
-                  ><a
-                    href="#"
-                    aria-label="Twitter"
-                    class="w-10 h-10 bg-background/10 hover:bg-gradient-primary rounded-full flex items-center justify-center transition-smooth hover:scale-110"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-twitter w-4 h-4"
-                    >
-                      <path
-                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-                      ></path></svg></a
-                  ><a
-                    href="#"
-                    aria-label="LinkedIn"
-                    class="w-10 h-10 bg-background/10 hover:bg-gradient-primary rounded-full flex items-center justify-center transition-smooth hover:scale-110"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-linkedin w-4 h-4"
-                    >
-                      <path
-                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                      ></path>
-                      <rect width="4" height="12" x="2" y="9"></rect>
-                      <circle cx="4" cy="4" r="2"></circle></svg></a
-                  ><a
-                    href="#"
-                    aria-label="Instagram"
-                    class="w-10 h-10 bg-background/10 hover:bg-gradient-primary rounded-full flex items-center justify-center transition-smooth hover:scale-110"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="lucide lucide-instagram w-4 h-4"
-                    >
-                      <rect
-                        width="20"
-                        height="20"
-                        x="2"
-                        y="2"
-                        rx="5"
-                        ry="5"
-                      ></rect>
-                      <path
-                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                      ></path>
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                    </svg>
-                  </a>
-                </div>
-              --></div>
+              </div>
               <div>
                 <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
                 <ul class="space-y-3">
@@ -1814,7 +2873,9 @@
                     <button
                       class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
                     >
-                      <a href="https://www.accessories.wimaskcompany.com">Tech Store</a>
+                      <a href="https://www.accessories.wimaskcompany.com">
+                        <span class="gradient-text">Tech Store</span>
+                      </a>
                     </button>
                   </li>
                 </ul>
@@ -1859,8 +2920,8 @@
                     </svg>
                     <div>
                       <p class="text-background/80 text-sm">
-                        <a href="mailto:kyleokunda@gmail.com"
-                          >kyleokunda@gmail.com</a
+                        <a href="mailto:info@wimaskcompany.com"
+                          >info@wimaskcompany.com</a
                         >
                       </p>
                       <p class="text-background/60 text-xs">24/7 Support</p>
@@ -1885,19 +2946,22 @@
                     </svg>
                     <div>
                       <p class="text-background/80 text-sm">
-                        <a href="tel:+254796020142">+254 796 020 142</a>
+                        <a href="tel:+254114714182">+254 114 714 182</a>
                       </p>
                       <p class="text-background/60 text-xs">Mon-Fri 9am-6pm</p>
                     </div>
                   </div>
                   <div class="flex items-start gap-3">
-                    <i class="text-primary fa-brands fa-whatsapp"></i>
+                    <i
+                      class="text-primary fa-brands fa-whatsapp"
+                      aria-hidden="true"
+                    ></i>
                     <div>
                       <p class="text-background/80 text-sm">
                         <a
                           target="_blank"
-                          href="https://wa.me/+254796020142?text='Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services.'"
-                          >+254 796 020 142</a
+                          href="https://wa.me/+254114714182?text=Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                          >+254 114 714 182</a
                         >
                       </p>
                       <p class="text-background/80 text-sm">
@@ -1921,88 +2985,89 @@
         </footer>
       </div>
     </div>
+
+    <script>
+      window.onload = function () {
+        //nav bg
+        var nav = document.getElementsByTagName("nav")[0];
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 150) {
+            nav.style.background = "whitesmoke";
+          } else {
+            nav.style.background = "transparent";
+          }
+        });
+
+        //Make responsive nav
+        var menuHolder = document.getElementsByClassName("md:hidden")[0];
+        var menu = menuHolder.children[0];
+        var mobileNav = document.getElementsByClassName("mobile-nav")[0];
+        var menuIcon = menu.innerHTML;
+        menu.addEventListener("click", function () {
+          if (mobileNav.classList.contains("showing")) {
+            mobileNav.classList.remove("showing");
+            mobileNav.style.display = "none";
+            menu.innerHTML = menuIcon;
+          } else {
+            mobileNav.classList.add("showing");
+            mobileNav.style.display = "block";
+            menu.innerHTML =
+              '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-6 w-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
+          }
+        });
+
+        //sending form data
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let company = document.getElementById("company");
+        let service = document.getElementById("service");
+        let project = document.getElementById("message");
+        let sendBtn = document.getElementById("sendemail");
+        let btnContent = sendBtn.innerHTML;
+
+        sendBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          let projectDetails = project.value;
+          let namevalue = name.value;
+          let emailvalue = email.value;
+          let companyname = company.value;
+          let serviceDesired = service.value;
+
+          if (projectDetails.trim() == "") {
+            alert("Please enter the project details.");
+            return;
+          } else if (namevalue.trim() == "") {
+            alert("Please enter your name");
+            return;
+          } else if (emailvalue == "" || emailvalue.trim() == "") {
+            alert("Please enter email.");
+            return;
+          } else if (!emailvalue.includes("@") || !emailvalue.includes(".")) {
+            alert("Please enter valid email.");
+            return;
+          }
+          sendBtn.textContent = "Sending...";
+
+          let params = {
+            projectDetails,
+            namevalue,
+            emailvalue,
+            companyname,
+            serviceDesired,
+          };
+          emailjs
+            .send("service_r20egd4", "template_b8p1hm1", params)
+            .then((Response) => {
+              sendBtn.innerHTML = btnContent;
+              name.value = "";
+              email.value = "";
+              company.value = "";
+              project.value = "";
+              alert("Thanks for reaching out. Email sent.");
+            });
+        });
+      };
+    </script>
   </body>
-  <script>
-    window.onload = function () {
-      //nav bg
-      var nav = document.getElementsByTagName("nav")[0];
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 150) {
-          nav.style.background = "whitesmoke";
-        } else {
-          nav.style.background = "transparent";
-        }
-      });
-
-      //Make responsive nav
-      var menuHolder = document.getElementsByClassName("md:hidden")[0];
-      var menu = menuHolder.children[0];
-      var mobileNav = document.getElementsByClassName("mobile-nav")[0];
-      var menuIcon = menu.innerHTML;
-      menu.addEventListener("click", function () {
-        if (mobileNav.classList.contains("showing")) {
-          mobileNav.classList.remove("showing");
-          mobileNav.style.display = "none";
-          menu.innerHTML = menuIcon;
-        } else {
-          mobileNav.classList.add("showing");
-          mobileNav.style.display = "block";
-          menu.innerHTML =
-            '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x h-6 w-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
-        }
-      });
-
-      //sending form data
-      let name = document.getElementById("name");
-      let email = document.getElementById("email");
-      let company = document.getElementById("company");
-      let service = document.getElementById("service");
-      let project = document.getElementById("message");
-      let sendBtn = document.getElementById("sendemail");
-      let btnContent = sendBtn.innerHTML;
-
-      sendBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        let projectDetails = project.value;
-        let namevalue = name.value;
-        let emailvalue = email.value;
-        let companyname = company.value;
-        let serviceDesired = service.value;
-
-        if (projectDetails.trim() == "") {
-          alert("Please enter the project details.");
-          return;
-        } else if (namevalue.trim() == "") {
-          alert("Please enter your name");
-          return;
-        } else if (emailvalue == "" || emailvalue.trim() == "") {
-          alert("Please enter email.");
-          return;
-        } else if (!emailvalue.includes("@") || !emailvalue.includes(".")) {
-          alert("Please enter valid email.");
-          return;
-        }
-        sendBtn.textContent = "Sending...";
-
-        let params = {
-          projectDetails,
-          namevalue,
-          emailvalue,
-          companyname,
-          serviceDesired,
-        };
-        emailjs
-          .send("service_r20egd4", "template_b8p1hm1", params)
-          .then((Response) => {
-            sendBtn.innerHTML = btnContent;
-            name.value = "";
-            email.value = "";
-            company.value = "";
-            project.value = "";
-            alert("Thanks for reaching out. Email sent.");
-          });
-      });
-    };
-  </script>
 </html>
