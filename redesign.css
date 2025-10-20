@@ -670,6 +670,13 @@ video {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.text-primary {
+  color: hsl(220 100% 50%);
+}
+
+.text-muted-foreground {
+  color: hsl(225 10% 45%);
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -912,4 +919,54 @@ body {
 
 .smooth-scroll {
   scroll-behavior: smooth;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+/* From Uiverse.io by M4rco592 */
+
+.gradient-text {
+  color: transparent;
+  font-size: 1.2rem;
+  background: conic-gradient(
+    from 0deg,
+    #ff6b6b,
+    #4ecdc4,
+    #45b7d1,
+    #96ceb4,
+    #feca57,
+    #ff9ff3,
+    #ff6b6b
+  );
+  background-clip: text;
+  filter: hue-rotate(0deg);
+  animation: hue-rotating 2s linear infinite;
+}
+
+@keyframes hue-rotating {
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
