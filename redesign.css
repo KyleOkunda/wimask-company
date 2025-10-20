@@ -952,13 +952,13 @@ body {
   font-size: 1.2rem;
   background: conic-gradient(
     from 0deg,
-    #ff6b6b,
-    #4ecdc4,
-    #45b7d1,
-    #96ceb4,
-    #feca57,
-    #ff9ff3,
-    #ff6b6b
+    #fd2b2b,
+    #bcfa11,
+    #0afd0a,
+    #03ffc8,
+    #310ff7,
+    #ff20e1,
+    #ff0c0c
   );
   background-clip: text;
   filter: hue-rotate(0deg);

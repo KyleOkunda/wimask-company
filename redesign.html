@@ -324,7 +324,7 @@
           >
             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
               <div
-                class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
+                class="w-16 h-16 mx-auto mb-4 rounded-full gradient-bg flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
               >
                 <i
                   class="fa-solid fa-desktop"
@@ -408,7 +408,7 @@
           >
             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
               <div
-                class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
+                class="w-16 h-16 mx-auto mb-4 rounded-full gradient-bg flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -539,7 +539,7 @@
           >
             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
               <div
-                class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
+                class="w-16 h-16 mx-auto mb-4 rounded-full gradient-bg flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -670,7 +670,7 @@
           >
             <div class="flex flex-col space-y-1.5 p-6 text-center pb-4">
               <div
-                class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500 to-green-600 flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
+                class="w-16 h-16 mx-auto mb-4 rounded-full gradient-bg flex items-center justify-center text-white shadow-card group-hover:shadow-hover transition-smooth group-hover:scale-110"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -804,11 +804,14 @@
 
       <!-- About Section -->
       <section id="about" class="bg-gray-50 py-16">
-        <div class="max-w-6xl mx-auto px-6">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+        <div class="container mx-auto px-4">
+          <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div class="animate-slide-in-left">
               <h3 class="text-3xl font-bold text-[#0F172A] mb-6">
-                Why Choose WIMASK?
+                Why Choose
+                <span class="gradient-bg bg-clip-text text-transparent"
+                  >WIMASK</span
+                >
               </h3>
               <p class="text-xl text-muted-foreground mb-8 w-full">
                 We're a team of passionate developers, marketers, and
@@ -916,32 +919,182 @@
                 </div>
               </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg">
-              <div class="text-center">
+            <div class="animate-slide-in-right">
+              <div class="grid grid-cols-2 gap-6">
                 <div
-                  class="w-20 h-20 bg-gradient-to-br from-[#1D4ED8] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4"
+                  class="rounded-lg text-card-foreground shadow-sm text-center shadow-card hover:shadow-hover transition-smooth bg-gradient-subtle border-0"
                 >
-                  <img
-                    class="rounded-full"
-                    src="/assets/wimask-logo.png"
-                    alt="Wimask Logo"
-                    style="height: 100%; width: 100%"
-                  />
+                  <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                      <div
+                        class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-award w-6 h-6"
+                        >
+                          <path
+                            d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"
+                          ></path>
+                          <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="text-2xl font-bold gradient-bg bg-clip-text text-transparent mb-2"
+                    >
+                      Experienced Developers
+                    </div>
+                    <div class="text-muted-foreground font-medium">
+                      Our team brings proven expertise in modern web
+                      technologies and best practices.
+                    </div>
+                  </div>
                 </div>
-                <h4 class="text-xl font-bold text-[#0F172A] mb-2">
-                  Ready to Transform?
-                </h4>
-                <p class="text-gray-600 mb-6">
-                  Join leading organizations already using WIMASK solutions.
-                </p>
-                <button
-                  class="w-full px-6 py-3 bg-[#1D4ED8] text-white rounded-md font-semibold hover:bg-[#1E40AF] transition-all duration-200"
+                <div
+                  class="rounded-lg text-card-foreground shadow-sm text-center shadow-card hover:shadow-hover transition-smooth bg-gradient-subtle border-0"
                 >
-                  Schedule Consultation
-                </button>
+                  <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                      <div
+                        class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-clock h-12 w-12 text-[hsl(var(--royal-blue))]"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="text-2xl font-bold gradient-bg bg-clip-text text-transparent mb-2"
+                    >
+                      Fast Delivery
+                    </div>
+                    <div class="text-muted-foreground font-medium">
+                      We understand the importance of time-to-market and deliver
+                      projects efficiently without compromising quality.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg text-card-foreground shadow-sm text-center shadow-card hover:shadow-hover transition-smooth bg-gradient-subtle border-0"
+                >
+                  <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                      <div
+                        class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-shield h-12 w-12 text-[hsl(var(--royal-blue))]"
+                        >
+                          <path
+                            d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="text-2xl font-bold gradient-bg bg-clip-text text-transparent mb-2"
+                    >
+                      Reliable Support
+                    </div>
+                    <div class="text-muted-foreground font-medium">
+                      Ongoing support and maintenance to ensure your digital
+                      solutions continue to perform optimally.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg text-card-foreground shadow-sm text-center shadow-card hover:shadow-hover transition-smooth bg-gradient-subtle border-0"
+                >
+                  <div class="p-6">
+                    <div class="flex justify-center mb-4">
+                      <div
+                        class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-circle-check-big h-12 w-12 text-[hsl(var(--royal-blue))]"
+                        >
+                          <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                          <path d="m9 11 3 3L22 4"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <div
+                      class="text-2xl font-bold gradient-bg bg-clip-text text-transparent mb-2"
+                    >
+                      Quality Assurance
+                    </div>
+                    <div class="text-muted-foreground font-medium">
+                      Rigorous testing and quality control processes ensure
+                      every project meets the highest standards.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="text-center">
+                  <div
+                    class="w-20 h-20 bg-gradient-to-br from-[#1D4ED8] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <img
+                      class="rounded-full"
+                      src="/assets/wimask-logo.png"
+                      alt="Wimask Logo"
+                      style="height: 100%; width: 100%"
+                    />
+                  </div>
+                  <h4 class="text-xl font-bold text-[#0F172A] mb-2">
+                    Ready to Transform?
+                  </h4>
+                  <p class="text-gray-600 mb-6">
+                    Join leading organizations already using WIMASK solutions.
+                  </p>
+                  <button
+                    class="w-full px-6 py-3 gradient-bg text-white rounded-md font-semibold hover:bg-[#1E40AF] transition-all duration-200"
+                  >
+                    Schedule Consultation
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg"></div>
           </div>
         </div>
       </section>
@@ -949,139 +1102,442 @@
       <!-- Partners Section -->
       <section id="partners" class="max-w-6xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
-          <h3 class="text-3xl font-bold text-[#0F172A] mb-4">
-            Partner With Us
-          </h3>
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            Let's Start
+            <span class="gradient-bg bg-clip-text text-transparent"
+              >Your Project</span
+            >
+          </h2>
           <p class="text-gray-600 max-w-2xl mx-auto">
-            Join our ecosystem of technology partners, implementation
-            specialists, and industry leaders.
+            Ready to transform your digital presence? Get in touch with us today
+            for a free consultation.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div
-            class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
-          >
+          <a href="mailto:info@wimaskcompany.com">
             <div
-              class="w-16 h-16 bg-[#1D4ED8]/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
             >
-              <span class="text-[#1D4ED8] text-2xl">🤝</span>
+              <div
+                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail w-6 h-6"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </span>
+              </div>
+              <h4 class="font-semibold text-[#0F172A] mb-2">Email Us</h4>
+              <p class="text-sm text-gray-600">info@wimaskcompany.com</p>
             </div>
-            <h4 class="font-semibold text-[#0F172A] mb-2">
-              Technology Partners
-            </h4>
-            <p class="text-sm text-gray-600">
-              Integrate with leading tech platforms
-            </p>
-          </div>
+          </a>
 
-          <div
-            class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
-          >
+          <a href="tel:+254114714182">
             <div
-              class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
             >
-              <span class="text-[#D4AF37] text-2xl">⚙️</span>
+              <div
+                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-phone w-6 h-6"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                </span>
+              </div>
+              <h4 class="font-semibold text-[#0F172A] mb-2">Call Us</h4>
+              <p class="text-sm text-gray-600">+254 114 714 182</p>
             </div>
-            <h4 class="font-semibold text-[#0F172A] mb-2">Implementation</h4>
-            <p class="text-sm text-gray-600">
-              Certified implementation specialists
-            </p>
-          </div>
+          </a>
 
-          <div
-            class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
+          <a
+            href="https://wa.me/+254114714182?text=Hello%20Wimask.%20I%20would%20like..."
+            target="_blank"
           >
             <div
-              class="w-16 h-16 bg-[#1D4ED8]/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
             >
-              <span class="text-[#1D4ED8] text-2xl">📈</span>
+              <div
+                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl"
+                  ><i
+                    class="fa-brands fa-whatsapp"
+                    style="scale: 1.5"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+              </div>
+              <h4 class="font-semibold text-[#0F172A] mb-2">Whatsapp</h4>
+              <p class="text-sm text-gray-600">+254 114 714 182</p>
             </div>
-            <h4 class="font-semibold text-[#0F172A] mb-2">Reseller Program</h4>
-            <p class="text-sm text-gray-600">Grow your business with WIMASK</p>
-          </div>
+          </a>
 
-          <div
-            class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
-          >
+          <a href="https://www.accessories.wimaskcompany.com" target="_blank">
             <div
-              class="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="text-center p-6 border rounded-lg hover:shadow-md transition-all duration-200"
             >
-              <span class="text-[#D4AF37] text-2xl">🎓</span>
+              <div
+                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl"
+                  ><i
+                    class="fa-solid fa-bag-shopping"
+                    style="scale: 1.2"
+                    aria-hidden="true"
+                  ></i
+                ></span>
+              </div>
+              <h4 class="font-semibold text-[#0F172A] mb-2 gradient-text">
+                Shop with us.
+              </h4>
+              <p class="text-sm text-gray-600 gradient-text">
+                Buy Phones and Laptops
+              </p>
             </div>
-            <h4 class="font-semibold text-[#0F172A] mb-2">
-              Training &amp; Support
-            </h4>
-            <p class="text-sm text-gray-600">
-              Comprehensive partner enablement
-            </p>
-          </div>
+          </a>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="bg-[#0F172A] text-white py-16">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-          <h3 class="text-3xl font-bold mb-4">Ready to Get Started?</h3>
-          <p class="text-lg opacity-90 mb-8">
+      <section id="contact" class="text-gray-900 py-16">
+        <div class="max-w-4xl mx-auto px-6">
+          <h3 class="text-3xl font-bold mb-4 text-center">
+            Ready to Get Started?
+          </h3>
+          <p class="text-lg opacity-90 mb-8 text-center">
             Transform your organization with WIMASK's integrated solutions.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              class="px-8 py-3 bg-[#D4AF37] text-[#0F172A] rounded-md font-semibold hover:bg-[#B8941F] transition-all duration-200"
+          <div class="lg:col-span-2 animate-slide-in-right" id="send-message">
+            <div
+              class="rounded-lg text-card-foreground shadow-sm shadow-hover border-0 bg-card/50 backdrop-blur-sm"
             >
-              Request Demo
-            </button>
-            <button
-              class="px-8 py-3 border border-white/40 rounded-md hover:bg-white/10 transition-all duration-200"
-            >
-              Contact Sales
-            </button>
-          </div>
-
-          <div class="mt-12 grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <h4 class="font-semibold text-[#D4AF37] mb-2">Email</h4>
-              <p class="opacity-90">info@wimaskcompany.com</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-[#D4AF37] mb-2">Phone</h4>
-              <p class="opacity-90">+254114714182</p>
-            </div>
-            <div>
-              <h4 class="font-semibold text-[#D4AF37] mb-2">Address</h4>
-              <p class="opacity-90">Innovation District<br />Tech Hub Center</p>
+              <div class="flex flex-col space-y-1.5 p-6">
+                <h3 class="font-semibold tracking-tight text-2xl">
+                  Send Us a Message.
+                </h3>
+              </div>
+              <div class="p-6 pt-0">
+                <form class="space-y-6">
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                      <label
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        for="name"
+                        >Full Name *</label
+                      ><input
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-smooth focus:shadow-card"
+                        id="name"
+                        name="name"
+                        placeholder="John Doe"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <label
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        for="email"
+                        >Email Address *</label
+                      ><input
+                        type="email"
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-smooth focus:shadow-card"
+                        id="email"
+                        name="email"
+                        placeholder="john@example.com"
+                        required=""
+                        value=""
+                      />
+                    </div>
+                  </div>
+                  <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                      <label
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        for="company"
+                        >Company Name</label
+                      ><input
+                        class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm transition-smooth focus:shadow-card"
+                        id="company"
+                        name="company"
+                        placeholder="Your Company"
+                        value=""
+                      />
+                    </div>
+                    <div class="space-y-2">
+                      <label
+                        class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                        for="service"
+                        >Service Interested In *</label
+                      ><select
+                        id="service"
+                        name="service"
+                        class="w-full px-3 py-2 bg-background border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring transition-smooth"
+                        required=""
+                      >
+                        <option value="web-development">Web Development</option>
+                        <option value="digital-marketing">
+                          Digital Marketing
+                        </option>
+                        <option value="social-media">
+                          Social Media Management
+                        </option>
+                        <option value="all-services">All Services</option>
+                        <option value="consultation">Free Consultation</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="space-y-2">
+                    <label
+                      class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                      for="message"
+                      >Project Details *</label
+                    ><textarea
+                      class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-smooth focus:shadow-card resize-none"
+                      id="message"
+                      name="message"
+                      placeholder="Tell us about your project requirements, goals, and timeline..."
+                      rows="5"
+                      required=""
+                    ></textarea>
+                  </div>
+                  <button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 gradient-bg text-white hover:scale-105 shadow-card hover:shadow-hover transition-bounce font-semibold h-14 rounded-lg px-10 text-lg w-full"
+                    type="submit"
+                    id="sendemail"
+                  >
+                    Send Message<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-send ml-2 w-5 h-5"
+                    >
+                      <path
+                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                      ></path>
+                      <path d="m21.854 2.147-10.94 10.939"></path>
+                    </svg>
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-[#1D4ED8] text-white py-8">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="flex items-center gap-4 mb-4 md:mb-0">
-            <div
-              class="w-10 h-10 rounded-md bg-[#0F172A] flex items-center justify-center"
-            >
-              <span class="text-sm font-bold text-[#D4AF37]">WM</span>
-            </div>
-            <div>
-              <p class="font-semibold">WIMASK COMPANY</p>
-              <p class="text-sm opacity-90">© 2025 All rights reserved</p>
+    <footer class="gradient-bg text-background relative">
+      <a href="#home"
+        ><button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 gradient-bg text-white hover:scale-105 hover:shadow-hover transition-bounce font-semibold h-10 w-10 absolute -top-6 right-8 z-10 shadow-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-up w-4 h-4"
+          >
+            <path d="m5 12 7-7 7 7"></path>
+            <path d="M12 19V5"></path>
+          </svg></button
+      ></a>
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="lg:col-span-1">
+            <h3 class="text-2xl font-bold mb-6">
+              <span>WIMASK</span>
+            </h3>
+            <p class="text-background/80 mb-6 leading-relaxed">
+              Transforming businesses through exceptional web development,
+              strategic digital marketing, and innovative social media
+              management solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="#home">Home</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="#solutions">Solutions</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="#about">About</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="#contact">Contact</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="https://www.accessories.wimaskcompany.com">
+                    <span class="gradient-text">Tech Store</span>
+                  </a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+            <ul class="space-y-3">
+              <li class="text-background/80 text-sm">
+                Web Systems Engineering
+              </li>
+              <li class="text-background/80 text-sm">
+                Intuitive Frontend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Mission Critical Backend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Optimized Database Solutions
+              </li>
+              <li class="text-background/80 text-sm">
+                Data Informed Digital Marketing
+              </li>
+              <li class="text-background/80 text-sm">
+                Sustainable SEO Optimization
+              </li>
+              <li class="text-background/80 text-sm">
+                Coneversion-Focused Social Media Management
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Get In Touch</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="mailto:info@wimaskcompany.com"
+                      >info@wimaskcompany.com</a
+                    >
+                  </p>
+                  <p class="text-background/60 text-xs">24/7 Support</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="tel:+254114714182">+254 114 714 182</a>
+                  </p>
+                  <p class="text-background/60 text-xs">Mon-Fri 9am-6pm</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="text-primary fa-brands fa-whatsapp"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a
+                      target="_blank"
+                      href="https://wa.me/+254114714182?text=Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                      >+254 114 714 182</a
+                    >
+                  </p>
+                  <p class="text-background/80 text-sm">Let's grow with you.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex gap-6 text-sm">
-            <a href="#" class="hover:text-[#D4AF37] transition-all duration-200"
-              >Privacy Policy</a
-            >
-            <a href="#" class="hover:text-[#D4AF37] transition-all duration-200"
-              >Terms of Service</a
-            >
-            <a href="#" class="hover:text-[#D4AF37] transition-all duration-200"
-              >Support</a
-            >
+        </div>
+        <div class="border-t border-background/20 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-background/60 text-sm">
+              © 2025 Wimask. All rights reserved.
+            </p>
           </div>
         </div>
       </div>
