@@ -40,6 +40,20 @@
       src="https://kit.fontawesome.com/f451cfc2d6.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "IeO59NlEOHh1cwLz6",
+          limitRate: {
+            throttle: 10000,
+          },
+        });
+      })();
+    </script>
     <style>
       *,
       *::before,
@@ -550,9 +564,15 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById("mobile-menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
+        const mobileBtnContent = mobileMenuBtn.innerHTML;
 
         mobileMenuBtn.addEventListener("click", function () {
           mobileMenu.classList.toggle("active");
+          if (mobileMenu.classList.contains("active")) {
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          } else {
+            mobileMenuBtn.innerHTML = mobileBtnContent;
+          }
         });
 
         // Close mobile menu when clicking on links
@@ -560,6 +580,7 @@
         mobileLinks.forEach((link) => {
           link.addEventListener("click", function () {
             mobileMenu.classList.remove("active");
+            mobileMenuBtn.innerHTML = mobileBtnContent;
           });
         });
 
@@ -617,7 +638,7 @@
                                     </select>
                                 </div>
                                 <div class="flex gap-3 pt-4">
-                                    <button type="submit" class="flex-1 px-4 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Submit Request</button>
+                                    <button id="submit" type="submit" class="flex-1 px-4 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Submit Request</button>
                                     <button type="button" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all duration-200" onclick="this.closest('.fixed').remove()">Cancel</button>
                                 </div>
                             </form>
@@ -629,17 +650,71 @@
               form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
-                // Show success message
-                modal.innerHTML = `
-                            <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
-                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <span class="text-green-600 text-2xl">✓</span>
-                                </div>
-                                <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Request Submitted!</h3>
-                                <p class="text-gray-600 mb-6">Thank you for your interest in WIMASK. Our team will contact you within 24 hours to schedule your demo.</p>
-                                <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
-                            </div>
-                        `;
+                let name = document.getElementById("demo-name");
+                let email = document.getElementById("demo-email");
+                let company = document.getElementById("demo-company");
+                let service = document.getElementById("demo-solution");
+                let sendBtn = document.getElementById("submit");
+                let btnContent = sendBtn.innerHTML;
+
+                let namevalue = name.value;
+                let emailvalue = email.value;
+                let companyname = company.value;
+                let serviceDesired = service.value;
+
+                if (namevalue.trim() == "") {
+                  alert("Please enter your name");
+                  return;
+                } else if (emailvalue == "" || emailvalue.trim() == "") {
+                  alert("Please enter email.");
+                  return;
+                } else if (
+                  !emailvalue.includes("@") ||
+                  !emailvalue.includes(".")
+                ) {
+                  alert("Please enter valid email.");
+                  return;
+                }
+                sendBtn.textContent = "Sending...";
+
+                let params = {
+                  namevalue,
+                  emailvalue,
+                  companyname,
+                  serviceDesired,
+                };
+                emailjs
+                  .send("service_7cjxkms", "template_5hnml92", params)
+                  .then((Response) => {
+                    sendBtn.innerHTML = btnContent;
+                    name.value = "";
+                    email.value = "";
+                    company.value = "";
+
+                    // Show success message
+                    modal.innerHTML = `
+                                      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                              <span class="text-green-600 text-2xl">✓</span>
+                                          </div>
+                                          <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Request Submitted!</h3>
+                                          <p class="text-gray-600 mb-6">Thank you for your interest in WIMASK. Our team will contact you within 24 hours to schedule your demo.</p>
+                                          <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                      </div>
+                                  `;
+                  })
+                  .catch(() => {
+                    modal.innerHTML = `
+                                      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgb(255, 141, 141);">
+                                              <span class="text-2xl" style="color: red;"> <i class="fa-solid fa-xmark"></i></span>
+                                          </div>
+                                          <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Email not sent!</h3>
+                                          <p class="text-gray-600 mb-6">Please check internet connection and try again.</p>
+                                          <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                      </div>
+                                  `;
+                  });
               });
 
               document.body.appendChild(modal);
