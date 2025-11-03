@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      WIMASK - Web Systems Development, Web Development, Real Estate, Health
+      Care, Expert Social Media Management and Professional Digital Marketing.
+    </title>
+
+    <meta
+      name="description"
+      content="Web Systems Engineering, Professional Web Development, Professional Digital Marketing and Expert Social Media Management Services. WIMASK integrates technology, architecture, and human potential to transform schools, real estate, healthcare, upcoming businesses, and defense — efficiently, securely, and sustainably."
+    />
+    <meta name="author" content="Wimask" />
+    <meta
+      name="keywords"
+      content="wimask, wimask company, tech solutions, full stack development, affordable websites,web development, digital marketing, social media management, Node.js, MySQL, SEO, PPC, frontend, backend, database management"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Wimask - Professional Web Development &amp; Digital Marketing"
+    />
+    <meta
+      property="og:description"
+      content="Professional web development, digital marketing, and social media management services. Expert solutions in React, Node.js, MySQL, SEO, and social media strategy."
+    />
+
+    <meta property="og:url" content="https://wimaskcompany.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="wimask - Professional Web Development &amp; Digital Marketing"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional web development, digital marketing, and social media management services."
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://wimaskcompany.com" />
+    <link
+      rel="shortcut icon"
+      href="assets/wimask-logo.png"
+      type="image/x-icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/f451cfc2d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "IeO59NlEOHh1cwLz6",
+          limitRate: {
+            throttle: 10000,
+          },
+        });
+      })();
+    </script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Shared gradient background for header, hero, and footer */
+      .gradient-bg {
+        background: linear-gradient(90deg, var(--royal) 0%, var(--char) 60%);
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .desktop-nav {
+          display: none;
+        }
+      }
+
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 font-sans smooth-scroll">
+    <!-- HEADER -->
+    <header class="gradient-bg text-[#0D3B66]">
+      <div
+        class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-4">
+          <!-- LOGO REPLACEMENT - Replace 'logo.png' with your actual logo file -->
+          <div
+            class="w-12 h-12 rounded-md bg-white flex items-center justify-center shadow-lg overflow-hidden"
+          >
+            <img
+              src="../assets/wimask-logo.png"
+              alt="WIMASK Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h1 class="text-xl font-semibold">WIMASK</h1>
+            <p class="text-sm opacity-90">Innovate. Secure. Lead.</p>
+          </div>
+        </div>
+
+        <nav class="desktop-nav hidden md:flex gap-6 items-center">
+          <a href="/#solutions" class="hover:underline transition-all"
+            >Solutions</a
+          >
+          <a href="/#about" class="hover:underline transition-all">About</a>
+          <a href="/#partners" class="hover:underline transition-all"
+            >Partners</a
+          >
+          <a href="/#contact" class="hover:underline transition-all">Contact</a>
+          <button
+            class="ml-4 px-4 py-2 rounded-md border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0F172A] transition"
+          >
+            Get Started
+          </button>
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-btn"
+            aria-label="menu"
+            class="p-2 rounded-md border border-white hover:bg-white/10 transition"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden bg-[#0F172A] border-t border-white/20"
+      >
+        <nav class="px-6 py-4 space-y-3">
+          <a
+            href="/#solutions"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Solutions</a
+          >
+          <a href="/#about" class="block py-2 hover:text-[#D4AF37] transition"
+            >About</a
+          >
+          <a
+            href="/#partners"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Partners</a
+          >
+          <a href="/#contact" class="block py-2 hover:text-[#D4AF37] transition"
+            >Contact</a
+          >
+          <button
+            class="mt-3 w-full px-4 py-2 rounded-md border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0F172A] transition"
+          >
+            Get Started
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main
+      class="flex-grow w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24"
+    >
+      <h1
+        class="text-4xl md:text-5xl font-bold text-[#0D3B66] text-center tracking-tight mb-16"
+      >
+        Insights
+      </h1>
+      <section aria-labelledby="web-development" class="mb-16">
+        <h2
+          id="web-development"
+          class="text-3xl md:text-4xl font-semibold text-[#0D3B66] mb-8"
+        >
+          Web Development
+        </h2>
+        <div
+          class="horizontal-scroll-container flex flex-nowrap overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:p-0 md:overflow-visible"
+        >
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about The Rise of Server-Side Rendering in React"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: The Rise of Server-Side Rendering in React"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/react/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  The Rise of Server-Side Rendering in React
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Explore the benefits of SSR with frameworks like Next.js for
+                  performance and SEO in modern web applications.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Mastering Tailwind CSS for Rapid UI Development"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Mastering Tailwind CSS for Rapid UI Development"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/tailwind/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Mastering Tailwind CSS for Rapid UI Development
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  A deep dive into utility-first CSS and how it can drastically
+                  speed up your development workflow.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about WebAssembly: The Future of High-Performance Web Apps"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: WebAssembly: The Future of High-Performance Web Apps"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/wasm/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  WebAssembly: The Future of High-Performance Web Apps
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Learn how WebAssembly is enabling near-native performance for
+                  complex applications directly in the browser.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Understanding Core Web Vitals for Better UX"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Understanding Core Web Vitals for Better UX"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/vitals/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Understanding Core Web Vitals for Better UX
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Google's Core Web Vitals are crucial for user experience. We
+                  break down what they are and how to improve them.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about State Management in 2024: Zustand vs. Redux Toolkit"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: State Management in 2024: Zustand vs. Redux Toolkit"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/state/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  State Management in 2024: Zustand vs. Redux Toolkit
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  A comparative analysis of two popular state management
+                  libraries for React, helping you choose the right tool.
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="web-systems-development" class="mb-16">
+        <h2
+          id="web-systems-development"
+          class="text-3xl md:text-4xl font-semibold text-[#0D3B66] mb-8"
+        >
+          Web Systems Development
+        </h2>
+        <div
+          class="horizontal-scroll-container flex flex-nowrap overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:p-0 md:overflow-visible"
+        >
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Building Scalable Microservices with Node.js"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Building Scalable Microservices with Node.js"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/microservices/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Building Scalable Microservices with Node.js
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  An architectural guide to designing and implementing a robust
+                  microservices-based system using Node.js.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about GraphQL vs. REST: Which API is Right for You?"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: GraphQL vs. REST: Which API is Right for You?"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/graphql/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  GraphQL vs. REST: Which API is Right for You?
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  We compare the pros and cons of GraphQL and REST APIs to help
+                  you make an informed decision for your next project.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about CI/CD Pipelines with GitHub Actions Explained"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: CI/CD Pipelines with GitHub Actions Explained"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/cicd/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  CI/CD Pipelines with GitHub Actions Explained
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Automate your testing and deployment workflows with GitHub
+                  Actions. A step-by-step guide for beginners.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about The Importance of Database Indexing for Performance"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: The Importance of Database Indexing for Performance"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/database/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  The Importance of Database Indexing for Performance
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Unlock significant performance gains in your applications by
+                  understanding and implementing database indexes correctly.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Securing Your Web Systems: A Checklist"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Securing Your Web Systems: A Checklist"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/security/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Securing Your Web Systems: A Checklist
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  A comprehensive checklist covering common vulnerabilities and
+                  best practices for securing your web applications.
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="digital-marketing" class="mb-16">
+        <h2
+          id="digital-marketing"
+          class="text-3xl md:text-4xl font-semibold text-[#0D3B66] mb-8"
+        >
+          Digital Marketing
+        </h2>
+        <div
+          class="horizontal-scroll-container flex flex-nowrap overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:p-0 md:overflow-visible"
+        >
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Leveraging SEO for Startup Growth in a Crowded Market"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Leveraging SEO for Startup Growth in a Crowded Market"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/seo/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Leveraging SEO for Startup Growth in a Crowded Market
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Discover actionable SEO strategies that can help your startup
+                  gain visibility and attract organic traffic.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Content Marketing Funnels That Actually Convert"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Content Marketing Funnels That Actually Convert"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/content/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Content Marketing Funnels That Actually Convert
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Learn how to create a content marketing funnel that guides
+                  potential customers from awareness to conversion.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about The Art of A/B Testing Your Landing Pages"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: The Art of A/B Testing Your Landing Pages"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/abtest/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  The Art of A/B Testing Your Landing Pages
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Maximize your conversion rates by systematically testing and
+                  optimizing elements on your landing pages.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Pay-Per-Click (PPC) Advertising: A Beginner's Guide"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Pay-Per-Click (PPC) Advertising: A Beginner's Guide"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/ppc/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Pay-Per-Click (PPC) Advertising: A Beginner's Guide
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Everything you need to know to get started with PPC campaigns
+                  on platforms like Google Ads and Bing Ads.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Email Marketing Automation Workflows to Save Time"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Email Marketing Automation Workflows to Save Time"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/email/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Email Marketing Automation Workflows to Save Time
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Set up powerful email automation workflows to nurture leads,
+                  onboard new users, and re-engage inactive customers.
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="social-media-management" class="mb-16">
+        <h2
+          id="social-media-management"
+          class="text-3xl md:text-4xl font-semibold text-[#0D3B66] mb-8"
+        >
+          Social Media Management
+        </h2>
+        <div
+          class="horizontal-scroll-container flex flex-nowrap overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 md:p-0 md:overflow-visible"
+        >
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Choosing the Right Social Media Platform for Your Brand"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Choosing the Right Social Media Platform for Your Brand"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/platforms/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Choosing the Right Social Media Platform for Your Brand
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Not all platforms are created equal. Find out which social
+                  media channels are the best fit for your business.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about How to Create a Winning Social Media Content Calendar"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: How to Create a Winning Social Media Content Calendar"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/calendar/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  How to Create a Winning Social Media Content Calendar
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  A practical guide to planning, organizing, and scheduling your
+                  social media content for maximum impact.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about The Power of Community Management in Building a Brand"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: The Power of Community Management in Building a Brand"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/community/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  The Power of Community Management in Building a Brand
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Go beyond just posting content. Learn how to build a loyal
+                  community around your brand on social media.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Analyzing Social Media Metrics That Matter"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Analyzing Social Media Metrics That Matter"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/metrics/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Analyzing Social Media Metrics That Matter
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  Forget vanity metrics. Focus on the data that truly reflects
+                  the success and ROI of your social media efforts.
+                </p>
+              </div>
+            </button>
+          </div>
+          <div class="w-80 flex-shrink-0 md:w-auto md:flex-shrink-1">
+            <button
+              class="bg-white border border-[#E0E0E0] rounded-2xl overflow-hidden h-full flex flex-col text-left transition-all duration-200 ease-in-out hover:shadow-xl hover:-translate-y-1 w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0D3B66] focus-visible:ring-offset-2"
+              aria-label="Read more about Influencer Marketing: Finding Authentic Partnerships"
+            >
+              <div class="aspect-video">
+                <img
+                  alt="Featured image for blog post titled: Influencer Marketing: Finding Authentic Partnerships"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  src="https://picsum.photos/seed/influencer/800/450"
+                />
+              </div>
+              <div class="p-6 flex flex-col flex-grow">
+                <h3
+                  class="text-xl font-medium text-[#0D3B66] mb-2 leading-snug"
+                >
+                  Influencer Marketing: Finding Authentic Partnerships
+                </h3>
+                <p
+                  class="text-[#333333] text-base leading-relaxed line-clamp-3 flex-grow"
+                >
+                  A guide to identifying and collaborating with influencers who
+                  align with your brand values and can reach your target
+                  audience.
+                </p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="text-center bg-white rounded-2xl p-8 md:p-16 border border-[#E0E0E0]"
+      >
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mb-4">
+          Ready to Grow Your Business?
+        </h2>
+        <p class="text-lg text-[#333333] max-w-2xl mx-auto mb-8">
+          Let our team of experts help you achieve your goals. Contact us today
+          for a personalized strategy session.
+        </p>
+        <button
+          class="px-6 py-3 rounded-lg font-medium text-base tracking-wider transition-all duration-200 ease-out transform disabled:cursor-not-allowed bg-[#0D3B66] text-white hover:bg-[#1E4D82] active:bg-[#0A2C4C] disabled:bg-[#F2F2F2] disabled:text-[#A9A9A9] hover:scale-102"
+        >
+          Get a Free Consultation
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
