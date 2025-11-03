@@ -43,7 +43,7 @@
     />
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -117,14 +117,19 @@
         }
       }
 
+      html,
       .smooth-scroll {
         scroll-behavior: smooth;
+      }
+
+      footer a:hover {
+        color: #d4af37;
       }
     </style>
   </head>
   <body class="min-h-screen bg-white text-gray-900 font-sans smooth-scroll">
     <!-- HEADER -->
-    <header class="gradient-bg text-[#0D3B66]">
+    <header class="text-[#0D3B66]">
       <div
         class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between"
       >
@@ -175,7 +180,7 @@
       <!-- Mobile Menu -->
       <div
         id="mobile-menu"
-        class="mobile-menu md:hidden bg-[#0F172A] border-t border-white/20"
+        class="mobile-menu md:hidden bg-[#0F172A] border-t border-white/20 text-white"
       >
         <nav class="px-6 py-4 space-y-3">
           <a
@@ -208,6 +213,7 @@
       class="flex-grow w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24"
     >
       <h1
+        id="title"
         class="text-4xl md:text-5xl font-bold text-[#0D3B66] text-center tracking-tight mb-16"
       >
         Insights
@@ -832,11 +838,365 @@
           for a personalized strategy session.
         </p>
         <button
-          class="px-6 py-3 rounded-lg font-medium text-base tracking-wider transition-all duration-200 ease-out transform disabled:cursor-not-allowed bg-[#0D3B66] text-white hover:bg-[#1E4D82] active:bg-[#0A2C4C] disabled:bg-[#F2F2F2] disabled:text-[#A9A9A9] hover:scale-102"
+          class="px-8 py-3 bg-[#D4AF37] text-[#0F172A] rounded-md font-semibold hover:bg-[#B8941F] transition-all duration-200"
         >
-          Get a Free Consultation
+          Request Demo
         </button>
       </section>
     </main>
+
+    <footer class="gradient-bg text-background relative text-white">
+      <a href="#title"
+        ><button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 gradient-bg text-white hover:scale-105 hover:shadow-hover transition-bounce font-semibold h-10 w-10 absolute -top-6 right-8 z-10 shadow-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-up w-4 h-4"
+          >
+            <path d="m5 12 7-7 7 7"></path>
+            <path d="M12 19V5"></path>
+          </svg></button
+      ></a>
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="lg:col-span-1">
+            <h3 class="text-2xl font-bold mb-6">
+              <span>WIMASK</span>
+            </h3>
+            <p class="text-background/80 mb-6 leading-relaxed">
+              Transforming businesses through exceptional web development,
+              strategic digital marketing, and innovative social media
+              management solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#home">Home</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#solutions">Solutions</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#about">About</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#contact">Contact</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="https://www.accessories.wimaskcompany.com">
+                    <span class="gradient-text">Tech Store</span>
+                  </a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+            <ul class="space-y-3">
+              <li class="text-background/80 text-sm">
+                Web Systems Engineering
+              </li>
+              <li class="text-background/80 text-sm">
+                Intuitive Frontend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Mission Critical Backend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Optimized Database Solutions
+              </li>
+              <li class="text-background/80 text-sm">
+                Data Informed Digital Marketing
+              </li>
+              <li class="text-background/80 text-sm">
+                Sustainable SEO Optimization
+              </li>
+              <li class="text-background/80 text-sm">
+                Coneversion-Focused Social Media Management
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Get In Touch</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="mailto:info@wimaskcompany.com"
+                      >info@wimaskcompany.com</a
+                    >
+                  </p>
+                  <p class="text-background/60 text-xs">24/7 Support</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="tel:+254114714182">+254 114 714 182</a>
+                  </p>
+                  <p class="text-background/60 text-xs">Mon-Fri 9am-6pm</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="text-primary fa-brands fa-whatsapp"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a
+                      target="_blank"
+                      href="https://wa.me/+254114714182?text=Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                      >+254 114 714 182</a
+                    >
+                  </p>
+                  <p class="text-background/80 text-sm">Let's grow with you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-background/20 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-background/60 text-sm">
+              © 2025 Wimask. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileBtnContent = mobileMenuBtn.innerHTML;
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+          mobileMenuBtn.innerHTML = mobileBtnContent;
+        }
+      });
+
+      // Close mobile menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileMenuBtn.innerHTML = mobileBtnContent;
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Demo request functionality
+      const demoButtons = document.querySelectorAll("button");
+      demoButtons.forEach((button) => {
+        if (
+          button.textContent.includes("Request Demo") ||
+          button.textContent.includes("Schedule Consultation") ||
+          button.textContent.includes("Contact Sales") ||
+          button.textContent.includes("Get Started")
+        ) {
+          button.addEventListener("click", function () {
+            // Create demo request modal
+            const modal = document.createElement("div");
+            modal.className =
+              "fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4";
+            modal.innerHTML = `
+                        <div class="bg-white rounded-xl p-8 max-w-md w-full">
+                            <h3 class="text-2xl font-bold text-[#0F172A] mb-4">Request Demo</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="demo-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                    <input type="text" id="demo-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]" required>
+                                </div>
+                                <div>
+                                    <label for="demo-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="demo-email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]" required>
+                                </div>
+                                <div>
+                                    <label for="demo-company" class="block text-sm font-medium text-gray-700 mb-1">Company/Organization</label>
+                                    <input type="text" id="demo-company" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]">
+                                </div>
+                                <div>
+                                    <label for="demo-solution" class="block text-sm font-medium text-gray-700 mb-1">Interested Solution</label>
+                                    <select id="demo-solution" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]">
+                                        <option value="edumask">EduMask - School Management</option>
+                                        <option value="realimask">RealiMask - Real Estate</option>
+                                        <option value="healmask">HealMask - Healthcare</option>
+                                        <option value="all">All Solutions</option>
+                                    </select>
+                                </div>
+                                <div class="flex gap-3 pt-4">
+                                    <button id="submit" type="submit" class="flex-1 px-4 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Submit Request</button>
+                                    <button type="button" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all duration-200" onclick="this.closest('.fixed').remove()">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    `;
+
+            // Handle form submission
+            const form = modal.querySelector("form");
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              let name = document.getElementById("demo-name");
+              let email = document.getElementById("demo-email");
+              let company = document.getElementById("demo-company");
+              let service = document.getElementById("demo-solution");
+              let sendBtn = document.getElementById("submit");
+              let btnContent = sendBtn.innerHTML;
+
+              let namevalue = name.value;
+              let emailvalue = email.value;
+              let companyname = company.value;
+              let serviceDesired = service.value;
+
+              if (namevalue.trim() == "") {
+                alert("Please enter your name");
+                return;
+              } else if (emailvalue == "" || emailvalue.trim() == "") {
+                alert("Please enter email.");
+                return;
+              } else if (
+                !emailvalue.includes("@") ||
+                !emailvalue.includes(".")
+              ) {
+                alert("Please enter valid email.");
+                return;
+              }
+              sendBtn.textContent = "Sending...";
+
+              let params = {
+                namevalue,
+                emailvalue,
+                companyname,
+                serviceDesired,
+              };
+              emailjs
+                .send("service_7cjxkms", "template_5hnml92", params)
+                .then((Response) => {
+                  sendBtn.innerHTML = btnContent;
+                  name.value = "";
+                  email.value = "";
+                  company.value = "";
+
+                  // Show success message
+                  modal.innerHTML = `
+                                      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                              <span class="text-green-600 text-2xl">✓</span>
+                                          </div>
+                                          <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Request Submitted!</h3>
+                                          <p class="text-gray-600 mb-6">Thank you for your interest in WIMASK. Our team will contact you within 24 hours to schedule your demo.</p>
+                                          <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                      </div>
+                                  `;
+                })
+                .catch(() => {
+                  modal.innerHTML = `
+                                      <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                          <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgb(255, 141, 141);">
+                                              <span class="text-2xl" style="color: red;"> <i class="fa-solid fa-xmark"></i></span>
+                                          </div>
+                                          <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Email not sent!</h3>
+                                          <p class="text-gray-600 mb-6">Please check internet connection and try again.</p>
+                                          <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                      </div>
+                                  `;
+                });
+            });
+
+            document.body.appendChild(modal);
+
+            // Close modal when clicking outside
+            modal.addEventListener("click", function (e) {
+              if (e.target === modal) {
+                modal.remove();
+              }
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
