@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Manual Systems Are Inefficient | WIMASK Web Systems</title>
+
+    <meta
+      name="description"
+      content="Learn why manual business systems slow growth and how web-based automation can improve efficiency, reduce costs, and boost performance."
+    />
+    <meta name="author" content="Wimask" />
+    <meta
+      name="keywords"
+      content="wimask, wimask company, tech solutions, full stack development, web development, digital marketing, manual systems, inefficient, business process automation, web systems development kenya, data silos, workflow optimization"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Wimask - Professional Web Development &amp; Digital Marketing"
+    />
+    <meta
+      property="og:description"
+      content="Professional web development, digital marketing, and social media management services. Expert solutions in React, Node.js, MySQL, SEO, and social media strategy."
+    />
+
+    <meta property="og:url" content="https://wimaskcompany.com" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="wimask - Professional Web Development &amp; Digital Marketing"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional web development, digital marketing, and social media management services."
+    />
+
+    <link rel="stylesheet" href="../../styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <link rel="canonical" href="https://wimaskcompany.com" />
+    <link
+      rel="shortcut icon"
+      href="assets/wimask-logo.png"
+      type="image/x-icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/f451cfc2d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "IeO59NlEOHh1cwLz6",
+          limitRate: {
+            throttle: 10000,
+          },
+        });
+      })();
+    </script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Shared gradient background for header, hero, and footer */
+      .gradient-bg {
+        background: linear-gradient(90deg, var(--royal) 0%, var(--char) 60%);
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .desktop-nav {
+          display: none;
+        }
+      }
+
+      html,
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+
+      footer a:hover {
+        color: #d4af37;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 font-sans smooth-scroll">
+    <header class="text-[#0D3B66]">
+      <div
+        class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-md bg-white flex items-center justify-center shadow-lg overflow-hidden"
+          >
+            <img
+              src="../../assets/wimask-logo.png"
+              alt="WIMASK Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h1 class="text-xl font-semibold">WIMASK</h1>
+            <p class="text-sm opacity-90">Innovate. Secure. Lead.</p>
+          </div>
+        </div>
+
+        <nav class="desktop-nav hidden md:flex gap-6 items-center">
+          <a href="/insights/blogs.html" class="hover:underline transition-all"
+            >Insights</a
+          >
+          <a href="/#solutions" class="hover:underline transition-all"
+            >Solutions</a
+          >
+          <a href="/#about" class="hover:underline transition-all">About</a>
+          <a href="/#partners" class="hover:underline transition-all"
+            >Partners</a
+          >
+          <a href="/#contact" class="hover:underline transition-all">Contact</a>
+          <button
+            class="ml-4 px-4 py-2 rounded-md border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0F172A] transition"
+          >
+            Get Started
+          </button>
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-btn"
+            aria-label="menu"
+            class="p-2 rounded-md border border-white hover:bg-white/10 transition"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden bg-[#0F172A] border-t border-white/20 text-white"
+      >
+        <nav class="px-6 py-4 space-y-3">
+          <a
+            href="/insights/blogs.html"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Insights</a
+          >
+          <a
+            href="/#solutions"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Solutions</a
+          >
+          <a href="/#about" class="block py-2 hover:text-[#D4AF37] transition"
+            >About</a
+          >
+          <a
+            href="/#partners"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Partners</a
+          >
+          <a href="/#contact" class="block py-2 hover:text-[#D4AF37] transition"
+            >Contact</a
+          >
+          <button
+            class="mt-3 w-full px-4 py-2 rounded-md border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0F172A] transition"
+          >
+            Get Started
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <nav aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li class="flex items-center">
+            <a href="/insights/blogs.html">
+              <button class="font-normal text-[#0D3B66] hover:underline">
+                Insights
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3 h-3 text-[#A9A9A9] mx-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <a href="/insights/blogs.html">
+              <button class="font-normal text-[#0D3B66] hover:underline">
+                Blogs
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3 h-3 text-[#A9A9A9] mx-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <a href="/insights/blogs.html#web-systems-development">
+              <button class="font-normal text-[#0D3B66] hover:underline">
+                Web Systems Development
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3 h-3 text-[#A9A9A9] mx-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="font-medium text-[#333333]" aria-current="page"
+              >Why Is My Manual System Inefficient</span
+            >
+          </li>
+        </ol>
+      </nav>
+      <article>
+        <header class="my-8">
+          <h1
+            id="title"
+            class="text-4xl md:text-5xl font-bold text-[#0D3B66] leading-tight tracking-tight mb-4"
+          >
+            Why Is My Manual System Inefficient? <br />
+            Understanding the Hidden Costs of Doing Things the Hard Way
+          </h1>
+        </header>
+        <div class="prose-styles">
+          <p class="text-xl text-[#333333] leading-relaxed my-6">
+            Still relying on spreadsheets and manual paperwork? Discover why
+            manual systems hold your business back and how shifting to a custom
+            web system can save time, cut costs, and unlock real efficiency.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          The Spreadsheet Trap: Why "Good Enough" Is Costing You Growth
+        </h2>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In Kenya’s dynamic and rapidly growing economy, many businesses are
+            running on a familiar set of tools: a physical ledger book, a
+            complex web of Excel spreadsheets, WhatsApp groups for approvals,
+            and a calculator for payroll. These manual systems feel comfortable,
+            cheap, and "good enough." They got the business off the ground.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            But as the business grows, this "good enough" system begins to show
+            its cracks. What was once a simple process now feels like chaos.
+            Your team is spending more time fighting the system than serving
+            customers. This isn't just an annoyance; it's a hidden tax on your
+            business. Research shows that operational inefficiencies in manual
+            operations can cost businesses as much as 20-30% of their revenue
+            every year.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This article explores why manual systems are inefficient and
+            uncovers the hidden costs that are holding your business back.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          What Is a Manual System? The "Way We've Always Done It"
+        </h2>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A manual system is any business process that relies primarily on
+            human effort, paper, or non-integrated digital tools (like
+            spreadsheets) to function. Data is moved from one step to the next
+            by a person, not by technology.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In the Kenyan market, these systems are common in critical areas:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>
+              <strong>Accounting and Finance:</strong> Using paper invoice
+              books, manually tracking M-Pesa payments against a spreadsheet,
+              and physically delivering receipts.
+            </li>
+            <li>
+              <strong>Human Resources (HR):</strong> Managing employee records
+              in filing cabinets, approving leave requests via WhatsApp, and
+              calculating payroll using an Excel formula.
+            </li>
+            <li>
+              <strong>Inventory Management:</strong> Relying on a single
+              "master" spreadsheet (that's constantly out of date) or
+              pen-and-paper stock counts.
+            </li>
+            <li>
+              <strong>Logistics and Dispatch:</strong> Manually planning
+              delivery routes and tracking drivers via phone calls.
+            </li>
+            <li>
+              <strong>Customer Scheduling:</strong> Using a physical diary or
+              endless email chains to book appointments.
+            </li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            While these systems seem to have no upfront cost, they carry
+            enormous invisible costs that stifle growth.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          The Core Problem: Why Manual Systems Are Inefficient
+        </h2>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The fundamental flaw of a manual system is that it doesn't scale. It
+            is a direct drain on your two most valuable resources: your team's
+            time and your data's accuracy.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          1. The Heavy Tax of Time-Consuming Data Entry
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The most visible inefficiency is the sheer amount of time spent on
+            repetitive data entry. In a manual system, the same piece of
+            information is often typed out multiple times. An order from a
+            customer email is manually typed into a sales spreadsheet, then
+            manually typed again onto an invoice, and then manually checked
+            again when reconciling the bank statement.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This isn't just slow; it's a massive productivity drain. A powerful
+            Kenyan case study highlights that simply by digitizing payroll, a
+            business can reduce the processing time from three days down to just
+            three hours. A manual system forces your skilled employees to become
+            expensive data-entry clerks.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          2. The High Risk of Human Error and Data Inconsistency
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            When a human enters data, errors are not a risk; they are a
+            guarantee. A typo, a missed zero, or a copy-paste error can have
+            compounding consequences. A single data entry mistake can cost a few
+            shillings, but correcting a resulting payroll error can cost tens of
+            thousands.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This leads to data inconsistency. Your sales team's spreadsheet says
+            you made 50 sales, but the finance team's ledger only shows 48.
+            Which is correct? Now, more time must be wasted to manually audit
+            and find the mistake. According to research from Gartner, this "poor
+            data quality" is a massive hidden cost for organizations.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          3. The Paralysis of 'Data Silos' and Limited Collaboration
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In a manual system, information is trapped. It lives in one person's
+            spreadsheet, in a specific email inbox, or in a physical filing
+            cabinet. This is a "data silo".
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Data silos make collaboration impossible.
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>
+              How can your sales team promise a delivery if they can't see the
+              real-time inventory?
+            </li>
+            <li>
+              How can you plan your cash flow if your finance data is three
+              weeks old?
+            </li>
+            <li>
+              How can you track project progress when updates are buried in 100
+              different WhatsApp messages?
+            </li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Teams are forced to operate blind, making decisions based on
+            guesswork and out-of-date information.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          4. The Inability to Scale: When Growth Becomes a Punishment
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A manual system that is "good enough" for five employees and 10
+            orders a day will completely collapse at 50 employees and 100 orders
+            a day.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is the central reason why manual systems are inefficient: they
+            cannot scale. To double your revenue, you are forced to double your
+            administrative staff to handle the paperwork. Your growth is
+            directly tied to your overhead. This is the definition of an
+            unscalable business model. Even "off-the-shelf" software creates
+            this problem by charging per-user fees that penalize you for hiring
+            more people.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          5. The "Rear-View Mirror": A Lack of Real-Time Information
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Manual systems are always historical. The reports you get show you
+            what happened last week or last month. In today's market, that's too
+            late.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            You cannot make agile, data-driven decisions. A business owner in
+            Nairobi needs to know their exact cash-on-hand today, not at the end
+            of the month. They need to know which products are selling out right
+            now, not after a stock-take. Manual systems force you to run your
+            business by looking in the rear-view mirror.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          Real-World Scenario: How Inefficiencies Strangle a Growing Kenyan
+          Business
+        </h2>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Let's look at a common scenario for a growing e-commerce business in
+            Nairobi.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>The Process:</strong> Orders come in via WhatsApp and an
+            Instagram DM. An employee manually enters them into an Excel
+            spreadsheet. They then check a different spreadsheet for inventory.
+            If the item is in stock, they create an invoice in a Word template
+            and save it as a PDF. They WhatsApp the invoice and a Paybill number
+            to the customer.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>The Friction:</strong> The next day, they must manually log
+            into their M-Pesa portal and scroll through transactions, trying to
+            match names and amounts to the invoice spreadsheet. Once they find
+            it, they call a delivery rider to arrange pickup.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>The Failure:</strong> But on this day, the inventory
+            spreadsheet was wrong. They sold an item that was out of stock. Now
+            they must call the customer, apologize, and process a manual
+            reversal. The customer is unhappy, the team is stressed, and an
+            entire day is wasted on fixing one error. This is the true cost of a
+            manual system.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          The Solution: From Manual vs. Automated Systems to Smart Integration
+        </h2>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The answer isn't just "buy software." The answer is business process
+            automation (BPA). This means implementing a system that doesn't just
+            store your data but actively does the work for you.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is where the benefits of web-based business systems become
+            clear. A custom web system, designed by a partner like WIMASK,
+            fundamentally solves the core problems of manual operations.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          Automating Business Workflows
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A custom web system is designed to automate your unique, repetitive
+            processes. Imagine the e-commerce scenario again:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>A customer places an order on your website.</li>
+            <li>
+              The system automatically confirms the inventory, generates an
+              invoice, and sends an M-Pesa STK push to their phone.
+            </li>
+            <li>
+              The moment the M-Pesa API confirms payment, the system
+              automatically marks the invoice as "Paid," updates the inventory
+              level, and sends the order directly to your dispatch rider's app.
+            </li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This entire end-to-end process happens in seconds, with zero human
+            error, 24/7. This is the power of automating business workflows.
+          </p>
+        </div>
+
+        <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+          Creating a Single Source of Truth
+        </h3>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A custom web system acts as the central hub for your entire
+            business. It breaks down the data silos by connecting all your
+            departments. Your sales, inventory, and finance teams are all
+            looking at the same real-time data. This eliminates confusion,
+            builds trust, and allows you to finally make decisions based on
+            facts, not guesswork.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          Your Path to Digital Transformation with WIMASK
+        </h2>
+        <div class="prose-styles">
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The transition from manual to automated is the most important step
+            in the digital transformation for businesses. For Kenyan SMEs, this
+            is no longer an optional upgrade; it is essential for survival and
+            growth.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Relying on spreadsheets and paper is not saving you money. It is
+            actively costing you revenue, customers, and your own valuable time.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            At WIMASK, our specialty is web systems development Kenya. We don't
+            just build software; we analyze your inefficient manual processes
+            and build a streamlined, automated web system that is tailored to
+            exactly how you work. Stop wasting time on data entry and start
+            focusing on growing your business.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Contact WIMASK today for a consultation. Let's discuss your current
+            workflows and show you how a custom web system can unlock true
+            efficiency.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          References
+        </h2>
+        <div class="prose-styles">
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2"
+          >
+            <li>Aonflow. The Hidden Costs of Manual Data Entry.</li>
+            <li>
+              CNBC Africa. (2024). Driving workforce efficiency and business
+              growth in Kenya's digital economy.
+            </li>
+            <li>Eddy. (2024). The Hidden Costs of Manual HR.</li>
+            <li>Gartner, Inc. The Cost of Poor Data Quality.</li>
+            <li>Giva, Inc. (2024). Custom Data Dashboard.</li>
+            <li>IBM. (2024). What is business process automation (BPA)?.</li>
+            <li>
+              Kenyan Wallstreet. (2024). Paper-based finance is slowing your SME
+              down.
+            </li>
+            <li>Old Windsor Tech. (2024). Outgrown Off-the-Shelf.</li>
+          </ul>
+        </div>
+      </article>
+      <section
+        aria-labelledby="share-article-heading"
+        class="mt-16 pt-8 border-t border-[#E0E0E0]"
+      ></section>
+      <section
+        class="text-center mt-16 p-8 bg-white rounded-2xl border border-[#E0E0E0]"
+      >
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mb-4">
+          Have a Project in Mind?
+        </h2>
+        <p class="text-lg text-[#333333] max-w-2xl mx-auto mb-8">
+          Ready to build a website that delivers real results? Contact the
+          experts at WIMASK today for a no-obligation consultation. Let's
+          discuss your vision and provide a detailed, transparent proposal from
+          a professional web development company committed to your success.
+        </p>
+        <button
+          class="px-8 py-3 bg-[#D4AF37] text-[#0F172A] rounded-md font-semibold hover:bg-[#B8941F] transition-all duration-200"
+        >
+          Contact Sales
+        </button>
+      </section>
+    </main>
+
+    <footer class="gradient-bg text-background relative text-white">
+      <a href="#title"
+        ><button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 gradient-bg text-white hover:scale-105 hover:shadow-hover transition-bounce font-semibold h-10 w-10 absolute -top-6 right-8 z-10 shadow-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-up w-4 h-4"
+          >
+            <path d="m5 12 7-7 7 7"></path>
+            <path d="M12 19V5"></path>
+          </svg></button
+      ></a>
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="lg:col-span-1">
+            <h3 class="text-2xl font-bold mb-6">
+              <span>WIMASK</span>
+            </h3>
+            <p class="text-background/80 mb-6 leading-relaxed">
+              Transforming businesses through exceptional web development,
+              strategic digital marketing, and innovative social media
+              management solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/">Home</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/insights/blogs.html">Insights</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#solutions">Solutions</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#about">About</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#contact">Contact</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="https://www.accessories.wimaskcompany.com">
+                    <span class="gradient-text">Tech Store</span>
+                  </a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+            <ul class="space-y-3">
+              <li class="text-background/80 text-sm">
+                Web Systems Engineering
+              </li>
+              <li class="text-background/80 text-sm">
+                Intuitive Frontend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Mission Critical Backend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Optimized Database Solutions
+              </li>
+              <li class="text-background/80 text-sm">
+                Data Informed Digital Marketing
+              </li>
+              <li class="text-background/80 text-sm">
+                Sustainable SEO Optimization
+              </li>
+              <li class="text-background/80 text-sm">
+                Coneversion-Focused Social Media Management
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Get In Touch</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="mailto:info@wimaskcompany.com"
+                      >info@wimaskcompany.com</a
+                    >
+                  </p>
+                  <p class="text-background/60 text-xs">24/7 Support</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="tel:+254114714182">+254 114 714 182</a>
+                  </p>
+                  <p class="text-background/60 text-xs">Mon-Fri 9am-6pm</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="text-primary fa-brands fa-whatsapp"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a
+                      target="_blank"
+                      href="httpsis://wa.me/+254114714182?text=Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                      >+254 114 714 182</a
+                    >
+                  </p>
+                  <p class="text-background/80 text-sm">Let's grow with you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-background/20 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-background/60 text-sm">
+              © 2025 Wimask. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileBtnContent = mobileMenuBtn.innerHTML;
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+          mobileMenuBtn.innerHTML = mobileBtnContent;
+        }
+      });
+
+      // Close mobile menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileMenuBtn.innerHTML = mobileBtnContent;
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Demo request functionality
+      const demoButtons = document.querySelectorAll("button");
+      demoButtons.forEach((button) => {
+        if (
+          button.textContent.includes("Request Demo") ||
+          button.textContent.includes("Schedule Consultation") ||
+          button.textContent.includes("Contact Sales") ||
+          button.textContent.includes("Get Started")
+        ) {
+          button.addEventListener("click", function () {
+            // Create demo request modal
+            const modal = document.createElement("div");
+            modal.className =
+              "fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4";
+            modal.innerHTML = `
+                            <div class="bg-white rounded-xl p-8 max-w-md w-full">
+                                <h3 class="text-2xl font-bold text-[#0F172A] mb-4">Request Demo</h3>
+                                <form class="space-y-4">
+                                    <div>
+                                        <label for="demo-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                        <input type="text" id="demo-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]" required>
+                                    </div>
+                                    <div>
+                                        <label for="demo-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                        <input type="email" id="demo-email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]" required>
+                                    </div>
+                                    <div>
+                                        <label for="demo-company" class="block text-sm font-medium text-gray-700 mb-1">Company/Organization</label>
+                                        <input type="text" id="demo-company" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]">
+                                    </div>
+                                    <div>
+                                        <label for="demo-solution" class="block text-sm font-medium text-gray-700 mb-1">Interested Solution</label>
+                                        <select id="demo-solution" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]">
+                                            <option value="edumask">EduMask - School Management</option>
+                                            <option value="realimask">RealiMask - Real Estate</option>
+                                            <option value="healmask">HealMask - Healthcare</option>
+                                            <option value="all">All Solutions</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex gap-3 pt-4">
+                                        <button id="submit" type="submit" class="flex-1 px-4 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Submit Request</button>
+                                        <button type="button" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all duration-200" onclick="this.closest('.fixed').remove()">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        `;
+
+            // Handle form submission
+            const form = modal.querySelector("form");
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              let name = document.getElementById("demo-name");
+              let email = document.getElementById("demo-email");
+              let company = document.getElementById("demo-company");
+              let service = document.getElementById("demo-solution");
+              let sendBtn = document.getElementById("submit");
+              let btnContent = sendBtn.innerHTML;
+
+              let namevalue = name.value;
+              let emailvalue = email.value;
+              let companyname = company.value;
+              let serviceDesired = service.value;
+
+              if (namevalue.trim() == "") {
+                alert("Please enter your name");
+                return;
+              } else if (emailvalue == "" || emailvalue.trim() == "") {
+                alert("Please enter email.");
+                return;
+              } else if (
+                !emailvalue.includes("@") ||
+                !emailvalue.includes(".")
+              ) {
+                alert("Please enter valid email.");
+                return;
+              }
+              sendBtn.textContent = "Sending...";
+
+              let params = {
+                namevalue,
+                emailvalue,
+                companyname,
+                serviceDesired,
+              };
+              emailjs
+                .send("service_7cjxkms", "template_5hnml92", params)
+                .then((Response) => {
+                  sendBtn.innerHTML = btnContent;
+                  name.value = "";
+                  email.value = "";
+                  company.value = "";
+
+                  // Show success message
+                  modal.innerHTML = `
+                                        <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                                <span class="text-green-600 text-2xl">✓</span>
+                                            </div>
+                                            <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Request Submitted!</h3>
+                                            <p class="text-gray-600 mb-6">Thank you for your interest in WIMASK. Our team will contact you within 24 hours to schedule your demo.</p>
+                                            <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                        </div>
+                                    `;
+                })
+                .catch(() => {
+                  modal.innerHTML = `
+                                        <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgb(255, 141, 141);">
+                                                <span class="text-2xl" style="color: red;"> <i class="fa-solid fa-xmark"></i></span>
+                                            </div>
+                                            <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Email not sent!</h3>
+                                            <p class="text-gray-600 mb-6">Please check internet connection and try again.</p>
+                                            <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                        </div>
+                                    `;
+                });
+            });
+
+            document.body.appendChild(modal);
+
+            // Close modal when clicking outside
+            modal.addEventListener("click", function (e) {
+              if (e.target === modal) {
+                modal.remove();
+              }
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
