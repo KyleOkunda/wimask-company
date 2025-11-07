@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      WIMASK - Social Media Management | Why Isn’t My Social Media Generating
+      Sales?
+    </title>
+
+    <meta
+      name="description"
+      content="Find out why your social media isn't generating sales in Kenya. This guide diagnoses common mistakes (like chasing vanity metrics) and provides actionable solutions (like sales funnels and M-Pesa integration) to turn followers into customers."
+    />
+    <meta name="author" content="Wimask" />
+    <meta
+      name="keywords"
+      content="wimask, wimask company, social media management, digital marketing, social media sales, M-Pesa integration, sales funnel, kenya, web development, Node.js, MySQL, SEO, PPC, frontend, backend"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="WIMASK - Why Isn’t My Social Media Generating Sales?"
+    />
+    <meta
+      property="og:description"
+      content="Find out why your social media isn't generating sales in Kenya. This guide diagnoses common mistakes and provides actionable solutions to turn followers into customers."
+    />
+
+    <meta property="og:url" content="https://wimaskcompany.com" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="WIMASK - Why Isn’t My Social Media Generating Sales?"
+    />
+    <meta
+      name="twitter:description"
+      content="Find out why your social media isn't generating sales in Kenya. This guide diagnoses common mistakes and provides actionable solutions to turn followers into customers."
+    />
+
+    <link rel="stylesheet" href="../../styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+
+    <link rel="canonical" href="https://wimaskcompany.com" />
+    <link
+      rel="shortcut icon"
+      href="assets/wimask-logo.png"
+      type="image/x-icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/f451cfc2d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "IeO59NlEOHh1cwLz6",
+          limitRate: {
+            throttle: 10000,
+          },
+        });
+      })();
+    </script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* Shared gradient background for header, hero and footer */
+      .gradient-bg {
+        background: linear-gradient(90deg, var(--royal) 0%, var(--char) 60%);
+      }
+
+      .mobile-menu {
+        display: none;
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      @media (max-width: 768px) {
+        .desktop-nav {
+          display: none;
+        }
+      }
+
+      html,
+      .smooth-scroll {
+        scroll-behavior: smooth;
+      }
+
+      footer a:hover {
+        color: #d4af37;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 font-sans smooth-scroll">
+    <header class="text-[#0D3B66]">
+      <div
+        class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="w-12 h-12 rounded-md bg-white flex items-center justify-center shadow-lg overflow-hidden"
+          >
+            <img
+              src="../../assets/wimask-logo.png"
+              alt="WIMASK Logo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <h1 class="text-xl font-semibold">WIMASK</h1>
+            <p class="text-sm opacity-90">Innovate. Secure. Lead.</p>
+          </div>
+        </div>
+
+        <nav class="desktop-nav hidden md:flex gap-6 items-center">
+          <a href="/insights/blogs.html" class="hover:underline transition-all"
+            >Insights</a
+          >
+          <a href="/#solutions" class="hover:underline transition-all"
+            >Solutions</a
+          >
+          <a href="/#about" class="hover:underline transition-all">About</a>
+          <a href="/#partners" class="hover:underline transition-all"
+            >Partners</a
+          >
+          <a href="/#contact" class="hover:underline transition-all">Contact</a>
+          <button
+            class="ml-4 px-4 py-2 rounded-md border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0F172A] transition"
+          >
+            Get Started
+          </button>
+        </nav>
+
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-btn"
+            aria-label="menu"
+            class="p-2 rounded-md border border-white hover:bg-white/10 transition"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="mobile-menu md:hidden bg-[#0F172A] border-t border-white/20 text-white"
+      >
+        <nav class="px-6 py-4 space-y-3">
+          <a
+            href="/insights/blogs.html"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Insights</a
+          >
+          <a
+            href="/#solutions"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Solutions</a
+          >
+          <a href="/#about" class="block py-2 hover:text-[#D4AF37] transition"
+            >About</a
+          >
+          <a
+            href="/#partners"
+            class="block py-2 hover:text-[#D4AF37] transition"
+            >Partners</a
+          >
+          <a href="/#contact" class="block py-2 hover:text-[#D4AF37] transition"
+            >Contact</a
+          >
+          <button
+            class="mt-3 w-full px-4 py-2 rounded-md border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0F172A] transition"
+          >
+            Get Started
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <nav aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-sm">
+          <li class="flex items-center">
+            <a href="/insights/blogs.html">
+              <button class="font-normal text-[#0D3B66] hover:underline">
+                Insights
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3 h-3 text-[#A9A9A9] mx-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <a href="/insights/blogs.html">
+              <button class="font-normal text-[#0D3B66] hover:underline">
+                Blogs
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3 h-3 text-[#A9A9A9] mx-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <a href="/insights/blogs.html#social-media-management">
+              <button class="font-normal text-[#0D3B66] hover:underline">
+                Social Media Management
+              </button>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3 h-3 text-[#A9A9A9] mx-2"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="font-medium text-[#333333]" aria-current="page"
+              >Why Isn’t My Social Media Generating Sales?</span
+            >
+          </li>
+        </ol>
+      </nav>
+
+      <article>
+        <header class="my-8">
+          <h1
+            id="title"
+            class="text-4xl md:text-5xl font-bold text-[#0D3B66] leading-tight tracking-tight mb-4"
+          >
+            Why Isn’t My Social Media Generating Sales? <br />
+            Common Mistakes and How to Fix Them
+          </h1>
+        </header>
+        <div class="prose-styles">
+          <p class="text-xl text-[#333333] leading-relaxed my-6">
+            You’re doing everything you’re "supposed" to do. You post
+            consistently on Instagram, Facebook, and even TikTok. Your content
+            is clean, your photos are professional, and you’re getting
+            engagement—likes, shares, and even a growing follower count. But
+            when you check the books at the end of the month, there’s a
+            frustrating disconnect. Your social media "success" isn't
+            translating into sales. Your M-Pesa business till notifications are
+            alarmingly quiet.
+          </p>
+          <p class="text-xl text-[#333333] leading-relaxed my-6">
+            If this sounds familiar, you are not alone. This is one of the most
+            common and painful frustrations for businesses in Kenya.
+          </p>
+          <p class="text-xl text-[#333333] leading-relaxed my-6">
+            The problem is especially acute here. Kenya's digital landscape is a
+            goldmine of opportunity. According to the Communications Authority
+            of Kenya (CA), the country has a mobile (SIM) penetration rate of
+            145.3% and 57.18 million mobile data subscriptions as of early
+            2025.Furthermore, Kenyans are among the heaviest social media users
+            in the world, spending an average of 4 hours and 19 minutes on these
+            platforms every day.
+          </p>
+          <p class="text-xl text-[#333333] leading-relaxed my-6">
+            This means your audience is not hard to find; they are
+            hyper-accessible. The failure to generate sales is almost never an
+            audience problem. It is a strategy, content, or funnel problem. This
+            article will diagnose the common mistakes that create this gap and
+            provide actionable, data-driven solutions tailored for the Kenyan
+            market. We will explain how to transform your social media from a
+            vanity project into a measurable sales engine.
+          </p>
+
+          <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+            Presence vs. Profitability: Why Likes Don't Pay the Bills
+          </h2>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The first, and most important, mental shift is to understand the
+            difference between a social media presence and a social media
+            strategy. A presence means you are active. A strategy means you are
+            active with a commercial purpose.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Many businesses fall into the "vanity metrics" trap. They chase
+            metrics that look impressive on a report but do not correlate with
+            business outcomes. These include:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>
+              <strong>Follower Count:</strong> A large number of followers who
+              never engage or buy.
+            </li>
+            <li>
+              <strong>Likes:</strong> A low-effort, passive signal of approval
+              that rarely translates to intent.
+            </li>
+            <li>
+              <strong>Impressions:</strong> A measure of how many times your
+              post was seen, not how many people cared about it.
+            </li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In contrast, actionable metrics measure progress toward business
+            goals: conversion rate, click-through rate, and customer acquisition
+            cost (CAC).
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In fact, the entire concept of "follower count" is becoming
+            irrelevant. Recent analyses show that social media algorithms have
+            fundamentally changed. They have shifted from a social graph (where
+            your reach is determined by your network) to an interest graph
+            (where your reach is determined by your content's quality and
+            ability to capture attention).
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is fantastic news for Kenyan small and medium enterprises
+            (SMEs). It means a small, agile business in Nairobi can get more
+            views than an established competitor with 100,000 followers if their
+            content is more compelling and relevant. This democratizes reach,
+            but only if you stop chasing followers and start creating content
+            that drives action. As a business owner, you must constantly ask
+            yourself the question: "Does your latest viral TikTok actually
+            contribute to your company's bottom line?".
+          </p>
+
+          <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+            Part 1: The Diagnosis: Common Reasons Your Social Media Isn’t
+            Selling
+          </h2>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Before we can build a solution, we must correctly diagnose the
+            problem. Here are the most common reasons your social media efforts
+            are failing to convert.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mistake 1: You Have a Posting Schedule, Not a Sales Strategy
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is the single most common failure. Many businesses equate
+            "posting three times a week" with having a strategy. This is a task,
+            not a strategy.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Posting without a clear strategy is like setting sail from Mombasa
+            without a map or a destination. You are active, you are creating
+            waves, but you have no idea where you are going, or how to get
+            there. A real strategy, as defined by marketing experts at Sprout
+            Social and Hootsuite, starts with setting clear, realistic goals
+            that are aligned with your broader business objectives.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            When you have no clear goals, you are forced to rely on vanity
+            metrics. Why? Because likes and followers are the only things
+            visible. You have no north star to measure against. A proper
+            strategy defines what success looks like before you ever create a
+            post, focusing on goals like generating leads, driving sales, or
+            providing customer care.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mistake 2: You’re Talking to Everyone (and Resonating with No One)
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A common symptom of a failing strategy is getting clicks but no
+            conversions, attracting "price shoppers" instead of loyal customers,
+            or having a high bounce rate on your website. This is the result of
+            targeting the wrong audience, or worse, targeting no one in
+            particular.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In the diverse Kenyan market, this "wrong audience" mistake is often
+            a "wrong platform" mistake. The Kenyan social media landscape is not
+            a monolith. According to Statcounter, as of October 2025, the market
+            is led by YouTube (37.02%), followed by Facebook (23.71%), and
+            Instagram (16.62%), with TikTok also showing massive growth and user
+            engagement, especially among the youth.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A B2B firm in Nairobi selling financial advisory services (a
+            LinkedIn-centric audience) cannot and should not use the same
+            content or platform as a B2C fashion brand in Kisumu (an
+            Instagram/TikTok-centric audience). Many businesses are on TikTok
+            because it’s popular, not because their target customer is there in
+            a "ready to buy" mindset. This wastes time, budget, and resources.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mistake 3: Your Content Is a Brochure, Not a Conversation
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Scroll through your brand's feed. Is it an endless stream of "Buy
+            Now," "Our Product," and "Sale Sale Sale"? If so, you are treating
+            social media like a broadcast antenna, not a social network.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            HubSpot analysis warns against prioritizing self-promotion, and
+            Forbes council members caution against blowing your own horn too
+            much. This hard sell approach is a massive turn-off. Equally
+            ineffective is vanilla content or overproduced content that feels
+            scripted and inauthentic.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The antidote is to shift from broadcasting to engaging. You must
+            provide value. More advanced strategies even employ emotional
+            targeting, a concept that taps into how your customers make
+            decisions. People buy based on emotion. A business that fails to
+            sell is often selling features ("This solar panel is 300 watts")
+            instead of emotional outcomes ("Never worry about KPLC blackouts
+            during your child's homework time again"). This value-driven,
+            emotionally resonant content is what builds the trust necessary for
+            a sale.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mistake 4: Your Social Media Is an Island (No CTA, No Funnel)
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is a critical, tactical failure. A business will spend hours
+            creating the perfect video, write a thoughtful caption... and then
+            nothing. The post is a dead end. There is no "next step" for the
+            user.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Every post with a commercial goal must have a clear Call to Action
+            (CTA). A CTA is not always "Buy Now." It is a prompt that guides the
+            user to the next logical step in their journey: "Learn More,"
+            "Download Our Free Guide," "Shop the Collection," or "Ask a Question
+            in the Comments"
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Some business owners fear that CTAs are too pushy. This is a
+            fundamental misunderstanding. A clear CTA is not pushy; it is a
+            service. It provides a clear, frictionless path for a user who is
+            already interested. A post without a CTA wastes the attention you
+            worked so hard to get.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This also points to a lack of a sales funnel. If you aren't using
+            tracking links (like UTM parameters) or a Facebook Pixel, you have
+            no way of knowing which posts are driving traffic or if that traffic
+            is converting. You are flying blind.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mistake 5: You Are Chasing Yesterday’s Metrics (The Vanity Trap)
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is the symptom that bundles all other mistakes. You are
+            diligently tracking your likes and follower growth while your CEO is
+            asking about revenue and return on ad spend.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The problem here is a communication gap. The CEO or business owner
+            doesn't care about reach or engagement as abstract concepts. They
+            care about business impact: market share, customer lifetime value,
+            and actual revenue. A marketing manager who reports on likes is
+            speaking the wrong language. They cannot prove their value, which is
+            why social media is often the first budget to be cut.
+          </p>
+
+          <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+            Part 2: The Cure: How to Turn Engagement into Sales in Kenya
+          </h2>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Now that we have diagnosed the problems, let's build the cure. This
+            is a step-by-step framework for re-engineering your social media
+            into a high-performance sales engine.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Step 1: Redefine Your Goals (From Visibility to Profitability)
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            You must replace your vague posting schedule with a documented
+            strategy built on S.M.A.R.T. goals: Specific, Measurable,
+            Attainable, Relevant, and Time-bound.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is how you move from a cost-center to a revenue-driver. Look at
+            the difference:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>
+              <strong>Vague Goal (Before):</strong> "We want to be better at
+              social media and get more followers."
+            </li>
+            <li>
+              <strong>S.M.A.R.T. Goal (After):</strong> "We will use a 3-month
+              Facebook lead-generation campaign to generate 100 qualified leads
+              for our new real estate property in Kilimani, aiming for a
+              cost-per-lead (CPL) of under KSh 800."
+            </li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This new goal is specific, measurable (100 leads at KSh 800 CPL),
+            and directly tied to a business outcome (sales). Now, every ad,
+            post, and piece of content has a clear purpose.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Step 2: Build Your Social Media Sales Funnel: The Road to Conversion
+          </h3>
+
+          <div class="aspect-video">
+            <img
+              alt="Social Media Sales Funnel"
+              class="w-full h-full"
+              style="object-fit: contain"
+              loading="lazy"
+              src="../../assets/social-media-sales-funnel.png"
+            />
+          </div>
+
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            To fix the "social media is an island" problem, you must build a
+            bridge. This bridge is a sales funnel. Most businesses fail because
+            they use a bottom-funnel message ("Buy Now!") on a top-funnel
+            audience (cold traffic). This is the marketing equivalent of
+            proposing marriage on a first date.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            A proper funnel builds a relationship and guides the user from
+            awareness to purchase.
+          </p>
+          <h4 class="text-xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Top-of-Funnel (TOFU): Awareness:
+          </h4>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The goal here is to attract, not sell. Your content should be
+            educational, entertaining, or inspiring.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>Kenyan Example:</strong> A local tour company creates a
+            stunning, 30-second TikTok video of "5 Hidden Gems in Watamu" The
+            CTA is "Follow us for more travel inspiration."
+          </p>
+          <h4 class="text-xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Middle-of-Funnel (MOFU): Consideration:
+          </h4>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The goal is to capture a lead from those you've attracted. You offer
+            a lead magnet, a piece of high value, in exchange for their contact
+            info.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>Kenyan Example:</strong> The same tour company runs an ad to
+            its followers: "Planning a trip? Download our Free Kenyan Safari
+            Packing Checklist." The CTA is "Get the checklist", which leads to a
+            simple email sign-up form.
+          </p>
+          <h4 class="text-xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Bottom-of-Funnel (BOFU): Conversion:
+          </h4>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The goal is to make the sale, but only to a warm audience that now
+            knows and trusts you.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>Kenyan Example:</strong> The company sends an email to the
+            lead list (everyone who downloaded the checklist) with a
+            "Limited-Time 15% discount on Watamu packages" The CTA is "Book
+            Now."
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Step 3: Master Kenyan Social Commerce (Sell Where They Scroll)
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Social commerce is the entire process of product discovery,
+            research, and checkout happening within the social media app. For
+            the Kenyan market, this is not a future trend, it is a mandate.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Consider these powerful statistics:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>
+              <strong>71%</strong> of Kenyans use social media to discover new
+              products and services.
+            </li>
+            <li>
+              <strong>55%</strong> of Kenyans use social media to purchase
+              products online.
+            </li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            For a majority of Kenyan consumers, social media is the new shopping
+            mall. Businesses aren't creating a new behavior; they are failing to
+            meet an existing one.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            In Kenya, this takes two forms:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>
+              <strong>Formal Social Commerce:</strong> Setting up Facebook and
+              Instagram Shops. This integrates your product catalog directly
+              into your profile, creating a seamless, professional, in-app
+              storefront where users can browse and add to cart.
+            </li>
+            <li>
+              <strong>Informal Social Commerce ("DM-to-Buy"):</strong> This is a
+              massive, uniquely Kenyan behavior, especially on platforms like
+              WhatsApp. The key is to professionalize this process. Instead of
+              chaotic DMs, use automated replies chatbots to answer common
+              questions, and a clear, simple system for capturing orders and
+              payments.
+            </li>
+          </ul>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Step 4: The M-Pesa Imperative: Your Unbreakable Trust Signal
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is, without question, one of the most critical and overlooked
+            elements of social media conversion in Kenya.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            One of the biggest challenges for Kenyan e-commerce is not traffic,
+            but turning shoppers into paying customers. This is due to a lack of
+            trust in online transactions and limited payment options.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Here is the simple truth: M-Pesa is not just a payment option. It is
+            a trust signal. In a market wary of fraud, the M-Pesa logo is a
+            powerful symbol of legitimacy and brand familiarity.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Think about this scenario: Your social media isn't broken—your
+            checkout is. A business can run a perfect Instagram ad , get a 10%
+            click-through rate, and lead a customer to a beautiful website. But
+            if that checkout page only offers Credit Card (Visa/Mastercard), the
+            cart abandonment rate will be catastrophic.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The Kenyan customer wants to pay with M-Pesa. It's simple, secure,
+            and familiar. Forcing them to find their credit card adds friction
+            and, more importantly, distrust. The social media campaign worked.
+            The business's internal system failed.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            <strong>The Solution:</strong> Any Kenyan business selling online
+            must have a seamless, integrated M-Pesa checkout. It is
+            non-negotiable for social media conversion optimization.
+          </p>
+
+          <h3 class="text-2xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Step 5: Use Analytics to Measure What Actually Matters
+          </h3>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Finally, to close the loop, you must fix the "vanity metrics"
+            problem by tracking what actually matters. You must measure the
+            health of your sales funnel.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Here is a simple framework for shifting your mindset from vanity
+            metrics to actionable KPIs.
+          </p>
+        </div>
+
+        <table class="min-w-full border-collapse text-left my-8">
+          <thead class="border-b border-[#E0E0E0]">
+            <tr>
+              <th
+                class="py-3 px-4 text-sm font-semibold text-[#0D3B66] uppercase tracking-wider"
+              >
+                Vanity Metric: What You Were Tracking
+              </th>
+              <th
+                class="py-3 px-4 text-sm font-semibold text-[#0D3B66] uppercase tracking-wider"
+              >
+                Actionable KPI: What You Should Track
+              </th>
+              <th
+                class="py-3 px-4 text-sm font-semibold text-[#0D3B66] uppercase tracking-wider"
+              >
+                The Business Question It Answers
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#E0E0E0]">
+            <tr>
+              <td
+                class="py-4 px-4 align-top text-lg font-medium text-[#333333]"
+              >
+                Follower Count
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                Engagement Rate
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                "Are we attracting the right people who are genuinely interested
+                in our content?"
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="py-4 px-4 align-top text-lg font-medium text-[#333333]"
+              >
+                Likes per Post
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                Click-Through Rate (CTR)
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                "Is our content compelling enough to make someone act and leave
+                the social platform?"
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="py-4 px-4 align-top text-lg font-medium text-[#333333]"
+              >
+                Reach / Impressions
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                Cost Per Lead (CPL)
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                "How much does it cost, in shillings, to get a new lead from
+                this channel?"
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="py-4 px-4 align-top text-lg font-medium text-[#333333]"
+              >
+                Video Views
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                Video Completion Rate
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                "Did our video hold attention long enough to deliver our key
+                message and CTA?"
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="py-4 px-4 align-top text-lg font-medium text-[#333333]"
+              >
+                N/A (Often untracked)
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                Social Media Conversion Rate
+              </td>
+              <td class="py-4 px-4 align-top text-lg text-[#333333]">
+                "Of the 100 people who clicked from Facebook, how many actually
+                completed their M-Pesa checkout?"
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="prose-styles">
+          <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+            Kenyan Success Stories: How Local Brands Win with Strategy
+          </h2>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            You don't have to look far to see this in action. The most
+            successful Kenyan brands on social media are not the ones who shout
+            "Buy Now" the loudest. They are the ones who build communities.
+          </p>
+          <h4 class="text-xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mini-Case Study 1: Moko Home
+          </h4>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            Moko, a local furniture company, is famous for its quirky and unique
+            brand voice. Their feed is filled with funny timeline posts and
+            clever comebacks in the comments. They built a community that enjoys
+            interacting with the brand. The sales are a natural, high-trust
+            byproduct of this strong relationship. This is a perfect example of
+            "engaging, not broadcasting".
+          </p>
+          <h4 class="text-xl font-medium text-[#0D3B66] mt-8 mb-4">
+            Mini-Case Study 2: Jumia & Safaricom
+          </h4>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            These corporate giants use their platforms to build and maintain
+            trust at scale. Jumia leverages influencers to create relational
+            trust. Safaricom uses its social channels to be supportive,
+            communicate its community initiatives, and handle customer care. For
+            both, trust is the primary currency that underpins all sales.
+          </p>
+
+          <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+            Conclusion: Stop Chasing Likes. Start Driving Conversions.
+          </h2>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The problem isn't social media. And in a market as digitally active
+            as Kenya, the problem is almost certainly not your audience. The
+            problem is the strategy.
+          </p>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            The solution is to evolve. You must move from a "posting" mindset to
+            a "sales engine" mindset. This requires:
+          </p>
+          <ul
+            class="list-disc list-outside text-lg text-[#333333] pl-5 space-y-2 my-6"
+          >
+            <li>Setting S.M.A.R.T. goals tied to revenue.</li>
+            <li>
+              Building a full-funnel strategy that guides customers from
+              awareness to purchase.
+            </li>
+            <li>
+              Creating emotionally resonant content that provides value, not
+              just a sales pitch.
+            </li>
+            <li>Mastering social commerce to sell where your customers are.</li>
+            <li>Integrating M-Pesa as an unbreakable trust signal.</li>
+            <li>Tracking actionable metrics that measure business impact.</li>
+          </ul>
+          <p class="text-lg text-[#333333] leading-relaxed my-6">
+            This is not simple. It requires data analysis, strategic planning,
+            content creation, and technical knowledge of funnels and M-Pesa
+            APIs. This complexity is precisely why most businesses fail to do
+            it, and it's why those who do it right achieve such a massive
+            competitive advantage.
+          </p>
+        </div>
+
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mt-12 mb-4">
+          References
+        </h2>
+        <div class="prose-styles">
+          <ul class="list-none text-lg text-[#333333] pl-5 space-y-2">
+            <li>
+              1. Communications Authority of Kenya (CA). (2025). Sector
+              Statistics Report: Q3 2024/2025.
+            </li>
+            <li>2. DataReportal. (2025). Digital 2025: Kenya.</li>
+            <li>
+              3. Forbes Business Council. (2025). Social Media Isn't Social
+              Anymore. Here's What's Driving Reach Now.
+            </li>
+            <li>
+              5. Sprout Social. (2025). How to Build an Effective Social Media
+              Marketing Strategy.
+            </li>
+            <li>
+              7. Forbes Business Council. (2025). Social Media Isn't Social
+              Anymore.
+            </li>
+            <li>
+              8. Hootsuite. (2025). How to Create a Social Media Marketing
+              Strategy.
+            </li>
+          </ul>
+        </div>
+      </article>
+      <section
+        aria-labelledby="share-article-heading"
+        class="mt-16 pt-8 border-t border-[#E0E0E0]"
+      ></section>
+
+      <section
+        class="text-center mt-16 p-8 bg-white rounded-2xl border border-[#E0E0E0]"
+      >
+        <h2 class="text-3xl font-semibold text-[#0D3B66] mb-4">
+          Partner with WIMASK to Build Your Sales Engine
+        </h2>
+        <p class="text-lg text-[#333333] max-w-2xl mx-auto mb-8">
+          Feeling overwhelmed? You don't have to be an expert in algorithms,
+          funnels, and M-Pesa APIs to run your business. That's our job. At
+          WIMASK, we are a professional social media management agency in Kenya
+          that focuses on one thing: turning followers into customers. We build
+          the data-driven social media strategies that drive real, measurable
+          conversions for Kenyan businesses. Stop guessing. Start selling.
+        </p>
+        <button
+          class="px-8 py-3 bg-[#D4AF37] text-[#0F172A] rounded-md font-semibold hover:bg-[#B8941F] transition-all duration-200"
+        >
+          Contact Sales
+        </button>
+      </section>
+    </main>
+
+    <footer class="gradient-bg text-background relative text-white">
+      <a href="#title"
+        ><button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-smooth focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 gradient-bg text-white hover:scale-105 hover:shadow-hover transition-bounce font-semibold h-10 w-10 absolute -top-6 right-8 z-10 shadow-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-arrow-up w-4 h-4"
+          >
+            <path d="m5 12 7-7 7 7"></path>
+            <path d="M12 19V5"></path>
+          </svg></button
+      ></a>
+      <div class="container mx-auto px-4 py-16">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="lg:col-span-1">
+            <h3 class="text-2xl font-bold mb-6">
+              <span>WIMASK</span>
+            </h3>
+            <p class="text-background/80 mb-6 leading-relaxed">
+              Transforming businesses through exceptional web development,
+              strategic digital marketing and innovative social media management
+              solutions.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/">Home</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/insights/blogs.html">Insights</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#solutions">Solutions</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#about">About</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="/#contact">Contact</a>
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-background/80 hover:text-background transition-smooth hover:translate-x-1 block"
+                >
+                  <a href="https://www.accessories.wimaskcompany.com">
+                    <span class="gradient-text">Tech Store</span>
+                  </a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+            <ul class="space-y-3">
+              <li class="text-background/80 text-sm">
+                Web Systems Engineering
+              </li>
+              <li class="text-background/80 text-sm">
+                Intuitive Frontend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Mission Critical Backend Development
+              </li>
+              <li class="text-background/80 text-sm">
+                Optimized Database Solutions
+              </li>
+              <li class="text-background/80 text-sm">
+                Data Informed Digital Marketing
+              </li>
+              <li class="text-background/80 text-sm">
+                Sustainable SEO Optimization
+              </li>
+              <li class="text-background/80 text-sm">
+                Coneversion-Focused Social Media Management
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Get In Touch</h4>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="mailto:info@wimaskcompany.com"
+                      >info@wimaskcompany.com</a
+                    >
+                  </p>
+                  <p class="text-background/60 text-xs">24/7 Support</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-phone w-4 h-4 mt-1 text-primary flex-shrink-0"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a href="tel:+254114714182">+254 114 714 182</a>
+                  </p>
+                  <p class="text-background/60 text-xs">Mon-Fri 9am-6pm</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i
+                  class="text-primary fa-brands fa-whatsapp"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <p class="text-background/80 text-sm">
+                    <a
+                      target="_blank"
+                      href="https://wa.me/+254114714182?text=Hi.%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                      >+254 114 714 182</a
+                    >
+                  </p>
+                  <p class="text-background/80 text-sm">Let's grow with you.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-background/20 mt-12 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-background/60 text-sm">
+              © 2025 Wimask. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileBtnContent = mobileMenuBtn.innerHTML;
+
+      mobileMenuBtn.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        if (mobileMenu.classList.contains("active")) {
+          mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+          mobileMenuBtn.innerHTML = mobileBtnContent;
+        }
+      });
+
+      // Close mobile menu when clicking on links
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.remove("active");
+          mobileMenuBtn.innerHTML = mobileBtnContent;
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Demo request functionality
+      const demoButtons = document.querySelectorAll("button");
+      demoButtons.forEach((button) => {
+        if (
+          button.textContent.includes("Request Demo") ||
+          button.textContent.includes("Schedule Consultation") ||
+          button.textContent.includes("Contact Sales") ||
+          button.textContent.includes("Get Started") ||
+          button.textContent.includes("Contact WIMASK") // Added new CTA button text
+        ) {
+          button.addEventListener("click", function () {
+            // Create demo request modal
+            const modal = document.createElement("div");
+            modal.className =
+              "fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4";
+            modal.innerHTML = `
+                          <div class="bg-white rounded-xl p-8 max-w-md w-full">
+                              <h3 class="text-2xl font-bold text-[#0F172A] mb-4">Request Demo</h3>
+                              <form class="space-y-4">
+                                  <div>
+                                      <label for="demo-name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                      <input type="text" id="demo-name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]" required>
+                                  </div>
+                                  <div>
+                                      <label for="demo-email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                      <input type="email" id="demo-email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]" required>
+                                  </div>
+                                  <div>
+                                      <label for="demo-company" class="block text-sm font-medium text-gray-700 mb-1">Company/Organization</label>
+                                      <input type="text" id="demo-company" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]">
+                                  </div>
+                                  <div>
+                                      <label for="demo-solution" class="block text-sm font-medium text-gray-700 mb-1">Interested Solution</label>
+                                      <select id="demo-solution" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]">
+                                          <option value="edumask">EduMask - School Management</option>
+                                          <option value="realimask">RealiMask - Real Estate</option>
+                                          <option value="healmask">HealMask - Healthcare</option>
+                                          <option value="social-media">Social Media Audit</option>
+                                          <option value="all">All Solutions</option>
+                                      </select>
+                                  </div>
+                                  <div class="flex gap-3 pt-4">
+                                      <button id="submit" type="submit" class="flex-1 px-4 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Submit Request</button>
+                                      <button type="button" class="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-all duration-200" onclick="this.closest('.fixed').remove()">Cancel</button>
+                                  </div>
+                              </form>
+                          </div>
+                      `;
+
+            // Handle form submission
+            const form = modal.querySelector("form");
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+
+              let name = document.getElementById("demo-name");
+              let email = document.getElementById("demo-email");
+              let company = document.getElementById("demo-company");
+              let service = document.getElementById("demo-solution");
+              let sendBtn = document.getElementById("submit");
+              let btnContent = sendBtn.innerHTML;
+
+              let namevalue = name.value;
+              let emailvalue = email.value;
+              let companyname = company.value;
+              let serviceDesired = service.value;
+
+              if (namevalue.trim() == "") {
+                alert("Please enter your name");
+                return;
+              } else if (emailvalue == "" || emailvalue.trim() == "") {
+                alert("Please enter email.");
+                return;
+              } else if (
+                !emailvalue.includes("@") ||
+                !emailvalue.includes(".")
+              ) {
+                alert("Please enter valid email.");
+                return;
+              }
+              sendBtn.textContent = "Sending...";
+
+              let params = {
+                namevalue,
+                emailvalue,
+                companyname,
+                serviceDesired,
+              };
+              emailjs
+                .send("service_7cjxkms", "template_5hnml92", params)
+                .then((Response) => {
+                  sendBtn.innerHTML = btnContent;
+                  name.value = "";
+                  email.value = "";
+                  company.value = "";
+
+                  // Show success message
+                  modal.innerHTML = `
+                                    <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                            <span class="text-green-600 text-2xl">✓</span>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Request Submitted!</h3>
+                                        <p class="text-gray-600 mb-6">Thank you for your interest in WIMASK. Our team will contact you within 24 hours to schedule your demo.</p>
+                                        <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                    </div>
+                                `;
+                })
+                .catch(() => {
+                  modal.innerHTML = `
+                                    <div class="bg-white rounded-xl p-8 max-w-md w-full text-center">
+                                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background: rgb(255, 141, 141);">
+                                            <span class="text-2xl" style="color: red;"> <i class="fa-solid fa-xmark"></i></span>
+                                        </div>
+                                        <h3 class="text-2xl font-bold text-[#0F172A] mb-2">Email not sent!</h3>
+                                        <p class="text-gray-600 mb-6">Please check internet connection and try again.</p>
+                                        <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-[#1D4ED8] text-white rounded-md hover:bg-[#1E40AF] transition-all duration-200">Close</button>
+                                    </div>
+                                  `;
+                });
+            });
+
+            document.body.appendChild(modal);
+
+            // Close modal when clicking outside
+            modal.addEventListener("click", function (e) {
+              if (e.target === modal) {
+                modal.remove();
+              }
+            });
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
